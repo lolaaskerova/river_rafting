@@ -35,3 +35,35 @@
     }
   }
 }
+.tour_link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 80px;
+  gap: 30px;
+  margin-top: -10px;
+  background-color: $main_blue;
+  @media (max-width: 847px) {
+    flex-direction: column;
+    text-align: center;
+  }
+  h4 {
+    color: $main_color;
+    font-family: $main_font;
+  }
+  button {
+    border: 2px solid $main_color;
+    border-radius: 7px;
+    padding: 10px 30px;
+    background-color: $main_blue;
+    color: $main_color;
+    font-weight: 600;
+    font-family: $main_font;
+    transition: all 0.3s;
+    &:hover {
+      color: $main_blue;
+      background-color: $main_color;
+    }
+  }
+}
