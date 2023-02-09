@@ -1,0 +1,106 @@
+@import "../../vendors/variables";
+
+footer {
+  background-color: #292e31;
+  padding: 60px 0px;
+  .footer-about {
+    margin-bottom: 40px;
+  }
+  h5 {
+    color: $main_color;
+    border-bottom: 1px solid #474646;
+    padding-bottom: 10px;
+    font-family: $main_font;
+    margin-bottom: 20px;
+  }
+  p {
+    color: #c8c8c8;
+    font-family: $main_font;
+  }
+  .payment-methods {
+    display: flex;
+    gap: 20px;
+    a {
+      text-decoration: none;
+      color: #c8c8c8;
+      border: 1px solid $main_color;
+      padding: 6px 9px;
+      transition: 0.5s all;
+      font-family: $main_font;
+      &:hover {
+        color: $main_color;
+      }
+    }
+  }
+  .footer-contact {
+    margin-bottom: 40px;
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      .contact-link {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        svg {
+          color: #c8c8c8;
+          &:hover {
+            color: $main_color;
+          }
+        }
+        a {
+          font-family: $main_font;
+          color: #c8c8c8;
+          text-decoration: none;
+          &:hover {
+            color: $main_color;
+          }
+        }
+      }
+    }
+  }
+  .social-media {
+    display: flex;
+    gap: 10px;
+    a {
+      font-size: 30px;
+      color: gray;
+      transform: 0.5s all;
+      &:hover {
+        color: #c8c8c8;
+      }
+    }
+  }
+  .footer-recent {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #474646;
+    padding: 8px 0px;
+    a {
+      text-decoration: none;
+      color: #c8c8c8;
+      font-family: $main_font;
+    }
+    span {
+      font-size: 14px;
+      color: gray;
+      font-family: $main_font;
+    }
+  }
+}
+.footer-bottom {
+  text-align: center;
+  padding: 30px;
+  background-color: #23272a;
+  h6 {
+    color: #c8c8c8;
+    font-family: $main_font;
+    a {
+      text-decoration: none;
+      color: #c8c8c8;
+      &:hover {
+        color: $main_color;
+      }
+    }
+  }
+}
