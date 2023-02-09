@@ -1,0 +1,57 @@
+@import "../../../vendors/variables";
+
+.reasons {
+  padding: 70px 0px;
+  .tours-reason-title {
+    text-align: center;
+    margin-bottom: 50px;
+    h1 {
+      color: $main_blue;
+      font-family: $second_font;
+      letter-spacing: 2px;
+    }
+    p {
+      font-family: $main_font;
+      color: $main_gray;
+      padding: 0px 300px;
+      @media (max-width: 960px) {
+        padding: 0px 100px;
+      }
+    }
+  }
+  .tours-reasons {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    @media (max-width: 767px) {
+      flex-direction: column;
+    }
+    .reason {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      gap: 10px;
+    }
+    .icon {
+      width: 54px;
+      height: 54px;
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+    .reason-titles {
+      h4 {
+        color: $main_blue;
+        font-family: $main_font;
+        font-weight: 600;
+      }
+      p {
+        color: $main_gray;
+        font-family: $main_font;
+      }
+    }
+  }
+}
