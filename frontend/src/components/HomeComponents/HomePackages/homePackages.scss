@@ -1,0 +1,62 @@
+@import "../../../vendors/variables";
+
+.home-packages {
+  padding: 70px 0px;
+  .title {
+    text-align: center;
+    h1 {
+      color: $main_blue;
+      font-family: $second_font;
+      letter-spacing: 2px;
+    }
+    p {
+      color: #3d3d3d;
+      font-family: $main_font;
+      padding: 0px 200px;
+    }
+  }
+  .special-tours {
+    margin-top: 60px;
+    .card {
+      background-color: #f1f1f1;
+      border: none;
+      .tour-price {
+        position: relative;
+
+        h4 {
+          position: absolute;
+          color: $main_color;
+          font-family: $main_font;
+          right: 15px;
+          top: 10px;
+          padding: 12px;
+        }
+        span {
+          position: absolute;
+          color: $main_color;
+          font-family: $main_font;
+          right: 15px;
+          top: 33px;
+          font-size: 14px;
+          padding: 12px;
+        }
+      }
+      .tour-content {
+        padding: 40px 40px 40px;
+        span {
+          font-size: 13px;
+          font-family: $main_font;
+        }
+        h5 {
+          font-size: 22px;
+          font-family: $main_font;
+          color: $main_blue;
+          font-weight: 600;
+        }
+        p {
+          font-family: $main_font;
+        }
+      }
+    }
+  }
+}
