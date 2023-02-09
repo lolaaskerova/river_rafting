@@ -1,0 +1,18 @@
+@import "../../../vendors/variables";
+
+.tours-hero {
+  background-image: url(../../../assets/images/toursHero.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 70vh;
+  .tours-hero-title {
+    text-align: center;
+    padding: 200px;
+    h1 {
+      color: $main_color;
+      font-family: $second_font;
+      font-size: 74px;
+      letter-spacing: 2px;
+    }
+  }
+}
