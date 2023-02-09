@@ -1,0 +1,78 @@
+@import "../../../vendors/variables";
+@import "../../../vendors/mixins";
+
+.hamburger-menu {
+  border-top: 1px solid gray;
+  //   padding-top: 10px;
+  //   padding-left: 15px;
+  padding: 10px 30px 0;
+  background-color: $main_gray;
+  display: none;
+  position: sticky;
+  top: 62px;
+
+  .hamburger-content {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    animation: growDown 0.4s ease-in-out;
+
+    @keyframes growDown {
+      0% {
+        opacity: 0;
+        transform: rotateX(-90deg);
+      }
+      25% {
+        transform: rotateX(-70deg);
+      }
+      50% {
+        transform: rotateX(-50deg);
+      }
+      75% {
+        transform: rotateX(-30deg);
+      }
+      100% {
+        transform: rotateX(0deg);
+      }
+    }
+    .hamburger_link {
+      @include nav-link;
+    }
+    #pages {
+      @include nav-link;
+      .hamburger-pages {
+        background-color: #1f2426;
+        display: flex;
+        display: none;
+        flex-direction: column;
+        padding: 10px 30px;
+        li {
+          list-style: none;
+          margin-bottom: 10px;
+          .dropdown_content {
+            text-decoration: none;
+            @include dropdown;
+          }
+        }
+      }
+    }
+    .hamburger_shop-dropdown {
+      background-color: #1f2426;
+      padding: 10px 30px;
+      display: none;
+      a {
+        @include dropdown;
+        text-decoration: none;
+      }
+    }
+    #purchase {
+      @include nav-link;
+      width: 98%;
+      text-align: center;
+      border: 1px solid $main_color;
+      border-radius: 4px;
+      padding: 10px 0px;
+      margin-bottom: 10px;
+    }
+  }
+}

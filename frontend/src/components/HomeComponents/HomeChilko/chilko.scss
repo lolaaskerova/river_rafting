@@ -1,0 +1,40 @@
+@import "../../../vendors/variables";
+
+.chilko {
+  margin-top: 70px;
+  background-image: url(../../../assets/images/chilko.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 90vh;
+  @media (max-width: 1024px) {
+    background-attachment: unset;
+  }
+  .chilko-inner {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .chilko-card {
+    margin-top: 100px;
+    padding: 40px;
+    width: 328px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-color: $main_color;
+    border-radius: 7px;
+    h3 {
+      font-family: $main_font;
+      font-weight: 500;
+    }
+    p {
+      color: #393939;
+      font-family: $main_font;
+    }
+    a {
+      text-decoration: none;
+      font-weight: 700;
+      font-weight: $main_font;
+    }
+  }
+}

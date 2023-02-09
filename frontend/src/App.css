@@ -1,0 +1,14 @@
+.container {
+  width: calc(100% - 30px);
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+body {
+  height: 300vh;
+}
+@font-face {
+  font-family: "ludicrous";
+  src: url("./assets/fonts/Ludicrous.woff") format("woff"),
+    url("./assets/fonts/Ludicrous-Stencil.woff") format("woff");
+}

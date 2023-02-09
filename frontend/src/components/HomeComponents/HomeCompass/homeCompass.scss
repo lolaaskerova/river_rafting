@@ -1,0 +1,15 @@
+@import "../../../vendors/variables";
+@import "../../../vendors/mixins";
+
+.compass {
+  h1 {
+    @include allToursTitle($colorName: $main_color);
+  }
+  p {
+    @include allToursParagraph($colorName: $main_color);
+  }
+  a {
+    @include tourBtn;
+    @include allToursLink($colorName: $main_color, $hoverColor: $main_blue);
+  }
+}

@@ -1,0 +1,260 @@
+@import "../../../vendors/variables";
+@import "../../../vendors/mixins";
+.home-tours {
+  padding: 100px 30px;
+  background-color: #efefef;
+  .home-tour-titles {
+    text-align: center;
+    h1 {
+      color: $main_blue;
+      font-size: 42px;
+      font-family: $second_font;
+      font-weight: 100;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+    p {
+      font-family: $main_font;
+      color: #393939;
+      padding: 0px 400px;
+      @media (max-width: 1115px) {
+        padding: 0px 100px;
+      }
+      @media (max-width: 767px) {
+        padding: 0px 30px;
+      }
+    }
+  }
+  .home-tour-sorting {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    gap: 30px;
+    @media (max-width: 767px) {
+      gap: 10px;
+    }
+    span {
+      font-weight: 700;
+      font-family: $main_font;
+    }
+    button {
+      cursor: pointer;
+      align-items: center;
+      border: none;
+      font-size: 15px;
+      font-family: $main_font;
+      color: #939799;
+      &:focus {
+        border-bottom: 1px solid black;
+        color: black;
+      }
+    }
+  }
+  .all-tours {
+    margin-top: 50px;
+    gap: 10px;
+    @media (max-width: 1115px) {
+      gap: 20px;
+    }
+    @media (max-width: 1110px) {
+      gap: 10px;
+    }
+    @media (max-width: 991px) {
+      gap: 18px;
+    }
+    @media (max-width: 950px) {
+      gap: 15px;
+    }
+    @media (max-width: 924px) {
+      gap: 20px;
+    }
+    @media (max-width: 795px) {
+      gap: 10px;
+    }
+    .tour-card {
+      width: 420px;
+      height: 420px;
+      position: relative;
+      @media (max-width: 1115px) {
+        width: 336px;
+        height: 336px;
+      }
+      @media (max-width: 1110px) {
+        width: 334px;
+        height: 334px;
+      }
+      @media (max-width: 1075px) {
+        width: 322px;
+        height: 322px;
+      }
+      @media (max-width: 1038px) {
+        width: 310px;
+        height: 310px;
+      }
+      @media (max-width: 1024px) {
+        width: 305px;
+        height: 305px;
+      }
+      @media (max-width: 991px) {
+        width: 446px;
+        height: 446px;
+      }
+      @media (max-width: 963px) {
+        width: 433px;
+        height: 433px;
+      }
+      @media (max-width: 950px) {
+        width: 428px;
+        height: 428px;
+      }
+      @media (max-width: 924px) {
+        width: 413px;
+        height: 413px;
+      }
+      @media (max-width: 898px) {
+        width: 400px;
+        height: 400px;
+      }
+      @media (max-width: 873px) {
+        width: 387px;
+        height: 387px;
+      }
+      @media (max-width: 847px) {
+        width: 374px;
+        height: 374px;
+      }
+      @media (max-width: 821px) {
+        width: 362px;
+        height: 362px;
+      }
+      @media (max-width: 795px) {
+        width: 357px;
+        height: 357px;
+      }
+      @media (max-width: 776px) {
+        width: 338px;
+        height: 338px;
+      }
+      @media (max-width: 767px) {
+        width: 675px;
+        height: 600px;
+      }
+      @media (max-width: 735px) {
+        width: 656px;
+        height: 626px;
+      }
+      @media (max-width: 600px) {
+        width: 557px;
+        height: 507px;
+      }
+
+      &:hover .card-content {
+        display: block;
+      }
+      &:hover img {
+        opacity: 0.6;
+      }
+
+      img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        @media (max-width: 1024px) {
+          opacity: 0.6;
+        }
+      }
+      .card-content {
+        position: absolute;
+        z-index: 1;
+        text-align: center;
+        padding: 20px 20px;
+        display: none;
+        animation: contentMove 0.5s;
+        @media (max-width: 1024px) {
+          display: block;
+        }
+        @media (max-width: 767px) {
+          text-align: center;
+          padding: 150px 100px;
+        }
+        @keyframes contentMove {
+          from {
+            top: 0px;
+          }
+          to {
+            top: 10px;
+          }
+        }
+        span {
+          color: $main_blue;
+          font-family: $main_font;
+          font-weight: 600;
+          @media (max-width: 1024px) {
+            display: none;
+          }
+        }
+        h2 {
+          padding-top: 100px;
+          font-family: $main_font;
+          color: $main_blue;
+          @media (max-width: 1075px) {
+            padding-top: 80px;
+          }
+          @media (max-width: 1038px) {
+            padding-top: 60px;
+          }
+          @media (max-width: 991px) {
+            padding-top: 110px;
+          }
+          @media (max-width: 767px) {
+            font-size: 40px;
+          }
+          @media (max-width: 600px) {
+            padding-top: 80px;
+          }
+        }
+        p {
+          font-family: $main_font;
+          color: $main_blue;
+          margin-bottom: 40px;
+          font-weight: 600;
+        }
+        a {
+          @include tourBtn;
+          color: $main_blue;
+          border: 2px solid $main_blue;
+        }
+      }
+    }
+  }
+}
+.tour-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+  gap: 30px;
+  @media (max-width: 847px) {
+    flex-direction: column;
+    text-align: center;
+  }
+  h4 {
+    color: $main_blue;
+    font-family: $main_font;
+  }
+  button {
+    border: 2px solid $main_blue;
+    border-radius: 7px;
+    padding: 10px 30px;
+    background-color: $main_color;
+    color: $main_blue;
+    font-weight: 600;
+    font-family: $main_font;
+    transition: all 0.3s;
+    &:hover {
+      color: $main_color;
+      background-color: $main_blue;
+    }
+  }
+}
