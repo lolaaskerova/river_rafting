@@ -1,7 +1,13 @@
 import React from "react";
-
+import { Helmet } from "react-helmet";
 const Careers = () => {
-  return <div>Careers</div>;
+  return (
+    <>
+      <Helmet>
+        <title>Careers</title>
+      </Helmet>
+    </>
+  );
 };
 
 export default Careers;

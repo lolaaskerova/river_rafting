@@ -1,7 +1,13 @@
 import React from "react";
-
+import { Helmet } from "react-helmet";
 const Blog = () => {
-  return <div>Blog</div>;
+  return (
+    <>
+      <Helmet>
+        <title>Blog</title>
+      </Helmet>
+    </>
+  );
 };
 
 export default Blog;
