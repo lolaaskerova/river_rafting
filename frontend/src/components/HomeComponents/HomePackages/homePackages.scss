@@ -13,10 +13,22 @@
       color: #3d3d3d;
       font-family: $main_font;
       padding: 0px 200px;
+      @media (max-width: 767px) {
+        padding: 0px;
+      }
     }
   }
   .special-tours {
     margin-top: 60px;
+    @media (max-width: 767px) {
+      gap: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .col-lg-11 {
+        width: calc(100% - (1 / 12 * 100%));
+      }
+    }
     .card {
       background-color: #f1f1f1;
       border: none;
