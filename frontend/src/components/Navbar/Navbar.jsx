@@ -19,7 +19,7 @@ const Navbar = () => {
     };
   }, []);
 
-  //hamburger menu
+  //hamburger menu toggle
   const [toggle, setToggle] = useState(false);
 
   console.log(toggle);
