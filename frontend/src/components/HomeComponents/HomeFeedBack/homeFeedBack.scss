@@ -6,11 +6,17 @@
     display: flex;
     justify-content: space-between;
     padding: 80px 0px;
+    gap: 50px;
+    @media (max-width: 767px) {
+      flex-direction: column;
+    }
     .comment {
       margin-bottom: 20px;
       text-align: left;
       line-height: 1.5;
-      max-width: 540px;
+      @media (max-width: 767px) {
+        width: 100%;
+      }
       p {
         font-size: 22px;
         font-family: $main_font;
