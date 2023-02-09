@@ -3,9 +3,15 @@
 footer {
   background-color: #292e31;
   padding: 60px 0px;
+  .footer-content {
+    @media (max-width: 991px) {
+      gap: 30px;
+    }
+  }
   .footer-about {
     margin-bottom: 40px;
   }
+
   h5 {
     color: $main_color;
     border-bottom: 1px solid #474646;
@@ -14,7 +20,7 @@ footer {
     margin-bottom: 20px;
   }
   p {
-    color: #c8c8c8;
+    color: $second_gray;
     font-family: $main_font;
   }
   .payment-methods {
@@ -22,7 +28,7 @@ footer {
     gap: 20px;
     a {
       text-decoration: none;
-      color: #c8c8c8;
+      color: $second_gray;
       border: 1px solid $main_color;
       padding: 6px 9px;
       transition: 0.5s all;
@@ -43,14 +49,14 @@ footer {
         align-items: center;
         gap: 10px;
         svg {
-          color: #c8c8c8;
+          color: $second_gray;
           &:hover {
             color: $main_color;
           }
         }
         a {
           font-family: $main_font;
-          color: #c8c8c8;
+          color: $second_gray;
           text-decoration: none;
           &:hover {
             color: $main_color;
@@ -67,7 +73,7 @@ footer {
       color: gray;
       transform: 0.5s all;
       &:hover {
-        color: #c8c8c8;
+        color: $second_gray;
       }
     }
   }
@@ -78,8 +84,11 @@ footer {
     padding: 8px 0px;
     a {
       text-decoration: none;
-      color: #c8c8c8;
+      color: $second_gray;
       font-family: $main_font;
+      &:hover {
+        color: $main_color;
+      }
     }
     span {
       font-size: 14px;
@@ -93,11 +102,11 @@ footer {
   padding: 30px;
   background-color: #23272a;
   h6 {
-    color: #c8c8c8;
+    color: $second_gray;
     font-family: $main_font;
     a {
       text-decoration: none;
-      color: #c8c8c8;
+      color: $second_gray;
       &:hover {
         color: $main_color;
       }

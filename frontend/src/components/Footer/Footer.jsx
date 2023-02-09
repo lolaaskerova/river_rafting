@@ -14,7 +14,7 @@ const Footer = () => {
       <footer>
         <div className="container">
           <div className="row footer-content">
-            <div className="col-4 footer-first-section">
+            <div className="col-xl-4 col-lg-6 col-md-12 footer-first-section">
               <div className="footer-about">
                 <h5>About Us</h5>
                 <div className="footer-about-text">
@@ -34,7 +34,7 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <div className="col-4 footer-second-section">
+            <div className="col-xl-4 col-lg-6 col-md-12 footer-second-section">
               <div className="footer-contact">
                 <h5>Contact Info</h5>
                 <div className="contact-links">
@@ -69,7 +69,7 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <div className="col-4 footer-third-section">
+            <div className="col-xl-4 col-lg-6 col-md-12 footer-third-section">
               <div className="footer-recent-post">
                 <h5>Recent Posts</h5>
                 <div className="footer-recent">
