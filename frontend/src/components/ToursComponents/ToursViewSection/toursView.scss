@@ -1,0 +1,42 @@
+@import "../../../vendors/variables";
+
+.tours-view {
+  margin-top: 70px;
+  background-image: url(../../../assets/images/saveSection.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  opacity: 0.9;
+  @media (max-width: 1024px) {
+    background-attachment: unset;
+  }
+  .tours-view-inner {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .tours-view-card {
+    margin-top: 150px;
+    padding: 40px;
+    width: 328px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-color: $main_color;
+    border-radius: 7px;
+    h3 {
+      font-family: $main_font;
+      font-weight: 600;
+      margin-bottom: 30px;
+    }
+    p {
+      color: #393939;
+      font-family: $main_font;
+      margin-bottom: 20px;
+    }
+    a {
+      text-decoration: none;
+      font-weight: 700;
+      font-weight: $main_font;
+    }
+  }
+}
