@@ -5,7 +5,7 @@ const PackagesAndSpecials = () => {
   return (
     <>
       <Helmet>
-        <title>Packages & Specials</title>
+        <title>Packages & Specials - River Rafting</title>
       </Helmet>
     </>
   );

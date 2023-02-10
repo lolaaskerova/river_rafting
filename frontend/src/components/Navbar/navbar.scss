@@ -2,7 +2,7 @@
 @import "../../vendors/mixins";
 
 .scrolled-bg {
-  background-color: $main_gray;
+  background-color: #23272a;
   transition: 0.9s;
   position: fixed;
   height: 62px;
@@ -110,8 +110,8 @@ nav {
       transition: 1s;
       background-color: #403f3f;
 
-      #dropdown-content {
-        color: #c8c8c8;
+      .dropdown-content {
+        color: $second_gray;
         opacity: 0.6;
         font-weight: 400;
         font-family: $main_font;
@@ -134,7 +134,7 @@ nav {
       }
     }
     .header-basket {
-      border-left: 1px solid #c8c8c8;
+      border-left: 1px solid $second_gray;
       @media (max-width: 810px) {
         display: none;
       }

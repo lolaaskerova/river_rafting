@@ -1,6 +1,8 @@
 import React from "react";
 import "./toursReasons.scss";
 import map from "../../../assets/images/map.png";
+import safety from "../../../assets/images/safety.png";
+import like from "../../../assets/images/like.png";
 const ToursReasons = () => {
   return (
     <div className="reasons container">
@@ -14,7 +16,7 @@ const ToursReasons = () => {
       <div className="tours-reasons">
         <div className="reason">
           <div className="icon">
-            <img src={map} alt="reason" />
+            <img src={safety} alt="reason" />
           </div>
           <div className="reason-titles">
             <h4>Safety First</h4>
@@ -37,7 +39,7 @@ const ToursReasons = () => {
         </div>
         <div className="reason">
           <div className="icon">
-            <img src={map} alt="reason" />
+            <img src={like} alt="reason" />
           </div>
           <div className="reason-titles">
             <h4>Experience of a Lifetime</h4>

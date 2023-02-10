@@ -4,7 +4,7 @@ const Basket = () => {
   return (
     <>
       <Helmet>
-        <title>Basket</title>
+        <title>Basket - River Rafting</title>
       </Helmet>
     </>
   );

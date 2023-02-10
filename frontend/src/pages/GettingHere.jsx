@@ -4,7 +4,7 @@ const GettingHere = () => {
   return (
     <>
       <Helmet>
-        <title>Getting Here</title>
+        <title>Getting Here - River Rafting</title>
       </Helmet>
     </>
   );

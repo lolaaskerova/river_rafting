@@ -4,7 +4,7 @@ const Contact = () => {
   return (
     <>
       <Helmet>
-        <title>Contact</title>
+        <title>Contact - River Rafting</title>
       </Helmet>
     </>
   );

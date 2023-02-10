@@ -13,8 +13,9 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>Home</title>
+        <title>Home - River Rafting</title>
       </Helmet>
+
       <HeroSection />
       <HomeAbout />
       <HomeAllTours />

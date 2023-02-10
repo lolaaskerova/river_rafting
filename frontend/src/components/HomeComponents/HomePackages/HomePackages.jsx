@@ -17,7 +17,7 @@ const HomePackages = () => {
       </div>
       <div className="row special-tours">
         <div className="col-4">
-          <div class="card" style={{ width: "23rem" }}>
+          <div class="card">
             <div className="tour-price">
               <h4>$399</h4>
               <span>/person</span>
@@ -34,7 +34,7 @@ const HomePackages = () => {
           </div>
         </div>
         <div className="col-4">
-          <div class="card" style={{ width: "23rem" }}>
+          <div class="card">
             <div className="tour-price">
               <h4>$299</h4>
               <span>/person</span>
@@ -51,8 +51,8 @@ const HomePackages = () => {
             </div>
           </div>
         </div>
-        <div className="col-4">
-          <div class="card" style={{ width: "23rem" }}>
+        <div className="col-4 ">
+          <div class="card">
             <div className="tour-price">
               <h4>$349</h4>
               <span>/person</span>

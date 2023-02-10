@@ -4,7 +4,7 @@ const Gallery = () => {
   return (
     <>
       <Helmet>
-        <title>Gallery</title>
+        <title>Gallery - River Rafting</title>
       </Helmet>
     </>
   );

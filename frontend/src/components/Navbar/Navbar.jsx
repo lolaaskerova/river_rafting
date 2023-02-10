@@ -21,6 +21,7 @@ const Navbar = () => {
 
   //hamburger menu toggle
   const [toggle, setToggle] = useState(false);
+  const [notFound, setNotFound] = useState(false);
 
   console.log(toggle);
 
@@ -43,11 +44,6 @@ const Navbar = () => {
             <a id="pages" href="#">
               Pages
               <ul className="pages">
-                <li>
-                  <Link className="dropdown_content" to="/about">
-                    About Us
-                  </Link>
-                </li>
                 <li>
                   <Link className="dropdown_content" to="/package">
                     Packages & Specials
@@ -80,8 +76,8 @@ const Navbar = () => {
                 </li>
               </ul>
             </a>
-            <Link className="nav_link" to="/features">
-              Features
+            <Link className="nav_link" to="/about">
+              About Us
             </Link>
             <Link className="nav_link shop" to="/shop">
               Shop

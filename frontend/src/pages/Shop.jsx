@@ -5,7 +5,7 @@ const Shop = () => {
   return (
     <>
       <Helmet>
-        <title>Shop</title>
+        <title>Shop - River Rafting</title>
       </Helmet>
     </>
   );

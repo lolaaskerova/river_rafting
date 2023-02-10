@@ -4,9 +4,7 @@
   margin: 0 auto;
   padding: 0 15px;
 }
-body {
-  height: 300vh;
-}
+
 @font-face {
   font-family: "ludicrous";
   src: url("./assets/fonts/Ludicrous.woff") format("woff"),

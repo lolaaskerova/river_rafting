@@ -1,7 +1,6 @@
 import AboutUs from "../pages/AboutUs";
 import Careers from "../pages/Careers";
 import Contact from "../pages/Contact";
-import Features from "../pages/Features";
 import Shop from "../pages/Shop";
 import Basket from "../pages/Basket";
 import Blog from "../pages/Blog";
@@ -12,6 +11,7 @@ import Home from "../pages/Home";
 import MainRoot from "../pages/MainRoot";
 import PackagesAndSpecials from "../pages/PackagesAndSpecials";
 import Tours from "../pages/Tours";
+import NotFound from "../pages/NotFound";
 
 export const ROUTES = [
   {
@@ -55,10 +55,6 @@ export const ROUTES = [
         element: <Contact />,
       },
       {
-        path: "/features",
-        element: <Features />,
-      },
-      {
         path: "/shop",
         element: <Shop />,
       },
@@ -69,6 +65,10 @@ export const ROUTES = [
       {
         path: "/basket",
         element: <Basket />,
+      },
+      {
+        path: "*",
+        element: <NotFound />,
       },
     ],
   },

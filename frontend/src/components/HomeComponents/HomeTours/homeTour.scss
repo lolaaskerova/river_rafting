@@ -46,8 +46,8 @@
       font-family: $main_font;
       color: #939799;
       &:focus {
-        border-bottom: 1px solid black;
-        color: black;
+        border-bottom: 1px solid $black;
+        color: $black;
       }
     }
   }

@@ -4,7 +4,7 @@ const AboutUs = () => {
   return (
     <>
       <Helmet>
-        <title>About Us</title>
+        <title>About Us - River Rafting</title>
       </Helmet>
       AboutUs
     </>

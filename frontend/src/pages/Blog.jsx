@@ -4,7 +4,7 @@ const Blog = () => {
   return (
     <>
       <Helmet>
-        <title>Blog</title>
+        <title>Blog - River Rafting</title>
       </Helmet>
     </>
   );
