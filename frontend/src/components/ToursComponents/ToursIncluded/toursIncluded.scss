@@ -1,0 +1,65 @@
+@import "../../../vendors/variables";
+.tours-included {
+  padding: 90px 0px;
+  .included-title {
+    text-align: center;
+    margin-bottom: 90px;
+    h1 {
+      color: $main_blue;
+      font-family: $second_font;
+      letter-spacing: 2px;
+    }
+    p {
+      padding: 0px 290px;
+      color: $main_gray;
+      font-family: $main_font;
+      @media (max-width: 1050px) {
+        padding: 0px 100px;
+      }
+      @media (max-width: 767px) {
+        padding: 0px 20px;
+      }
+    }
+  }
+  .included {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    .included-content {
+      display: flex;
+      justify-content: space-between;
+      gap: 50px;
+      @media (max-width: 767px) {
+        flex-direction: column;
+      }
+      .included-logo {
+        width: 45px;
+        height: 45px;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    .included-content-inner {
+      display: flex;
+      gap: 20px;
+      h5 {
+        color: $main_blue;
+        font-family: $main_font;
+        font-weight: 600;
+      }
+      p {
+        color: $main_gray;
+        font-family: $main_font;
+      }
+    }
+    .parking p {
+      max-width: 470px;
+    }
+    .video p {
+      max-width: 470px;
+    }
+  }
+}
