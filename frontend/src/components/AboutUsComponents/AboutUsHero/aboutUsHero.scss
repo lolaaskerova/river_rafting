@@ -1,0 +1,18 @@
+@import "../../../vendors/variables";
+
+.about-us-hero {
+  background-image: url(../../../assets/images/aboutUsHero.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 70vh;
+  .about-us-hero-title {
+    text-align: center;
+    padding: 150px;
+    h1 {
+      color: $main_color;
+      font-family: $second_font;
+      font-size: 74px;
+      letter-spacing: 2px;
+    }
+  }
+}
