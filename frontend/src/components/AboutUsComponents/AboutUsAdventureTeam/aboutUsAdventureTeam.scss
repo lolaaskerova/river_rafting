@@ -1,0 +1,58 @@
+@import "../../../vendors/variables";
+
+.adventure-team {
+  padding: 100px 0px;
+
+  .about-us-map {
+    display: flex;
+    gap: 16px;
+    .map-logo {
+      width: 50px;
+      height: 50px;
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+    .text {
+      h3 {
+        color: $main_blue;
+        font-family: $main_font;
+        font-weight: 600;
+      }
+      p {
+        font-family: $main_font;
+        color: $main_gray;
+      }
+    }
+  }
+  .adventure {
+    .card {
+      background-color: $third_gray;
+      border: none;
+    }
+    img {
+      width: 100%;
+    }
+    .adventurer-info {
+      h4 {
+        font-family: $main_font;
+        font-weight: 600;
+      }
+      p {
+        font-family: $main_font;
+        color: $main_gray;
+      }
+    }
+    .adventurer-social-media {
+      margin-top: 20px;
+      display: flex;
+      gap: 10px;
+      color: $second_gray;
+      font-size: 18px;
+    }
+  }
+  .bottom-row {
+    margin-top: 30px;
+  }
+}
