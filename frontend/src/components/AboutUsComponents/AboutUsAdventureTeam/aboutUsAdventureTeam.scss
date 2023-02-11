@@ -2,8 +2,17 @@
 
 .adventure-team {
   padding: 100px 0px;
-
+  .row {
+    @media (max-width: 767px) {
+      display: flex;
+      flex-direction: column;
+      padding-left: 60px;
+    }
+  }
   .about-us-map {
+    @media (max-width: 767px) {
+      width: 80%;
+    }
     display: flex;
     gap: 16px;
     .map-logo {
@@ -27,6 +36,9 @@
     }
   }
   .adventure {
+    @media (max-width: 767px) {
+      width: 80%;
+    }
     .card {
       background-color: $third_gray;
       border: none;
