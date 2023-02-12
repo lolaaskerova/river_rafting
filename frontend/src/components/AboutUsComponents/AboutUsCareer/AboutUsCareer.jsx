@@ -18,7 +18,7 @@ const AboutUsCareer = () => {
           <img src={camp} alt="camp" />
         </div>
         <div className="title">
-          <h1>CAREERS WITH US</h1>
+          <h1>careers with us</h1>
           <p>
             Quisque vestibulum fermentum fermentum. In nulla sem, gravida a
             feugiat in, maximus id orci. Donec nec sagittis ipsum, sit amet
