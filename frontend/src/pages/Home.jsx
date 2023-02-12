@@ -8,8 +8,7 @@ import HomeFeedBack from "../components/HomeComponents/HomeFeedBack/HomeFeedBack
 import HomeLocation from "../components/HomeComponents/HomeLocation/HomeLocation";
 import HomePackages from "../components/HomeComponents/HomePackages/HomePackages";
 import HomeTourLink from "../components/HomeComponents/HomeTourLink/HomeTourLink";
-import HomeTour from "../components/HomeComponents/HomeTours/HomeTour";
-
+import OurTours from "../components/OurTours/OurTours";
 const Home = () => {
   return (
     <>
@@ -20,7 +19,7 @@ const Home = () => {
       <HeroSection />
       <HomeAbout />
       <HomeAllTours />
-      <HomeTour />
+      <OurTours title="VIEW OUR TOURS" />
       <HomeTourLink />
       <Chilko />
       <HomeFeedBack />

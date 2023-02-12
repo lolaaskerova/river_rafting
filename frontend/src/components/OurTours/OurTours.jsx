@@ -1,7 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./ourTours.scss";
-import chillout from "../../assets/images/chilloutTour.jpg";
+import AllTours from "../AllTours/AllTours";
 const OurTours = (props) => {
   const { title } = props;
   return (
@@ -26,59 +25,7 @@ const OurTours = (props) => {
               <button>Multi-Day</button>
               <button>Rapids</button>
             </div>
-            <div className="row all-tours">
-              <div className="col-lg-4 col-md-6 col-sm-12 tour-card">
-                <div className="tour-card-content">
-                  <span>6 hours</span>
-                  <div className="tour-card-title">
-                    <h3>River Rock Tour</h3>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    </p>
-                    <Link to="/tours">
-                      <button>VIEW TOUR</button>
-                    </Link>
-                  </div>
-                </div>
-                <div className="tours-card-img">
-                  <img src={chillout} alt="tourImg" />
-                </div>
-              </div>
-              <div className="col-lg-4 col-md-6 col-sm-12 tour-card">
-                <div className="tour-card-content">
-                  <span>2 days</span>
-                  <div className="tour-card-title">
-                    <h3>Camping Tour</h3>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    </p>
-                    <Link to="/tours">
-                      <button>VIEW TOUR</button>
-                    </Link>
-                  </div>
-                </div>
-                <div className="tours-card-img">
-                  <img src={chillout} alt="tourImg" />
-                </div>
-              </div>
-              <div className="col-lg-4 col-md-6 col-sm-12 tour-card">
-                <div className="tour-card-content">
-                  <span>8 hours</span>
-                  <div className="tour-card-title">
-                    <h3>Waterfall Tour</h3>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    </p>
-                    <Link to="/tours">
-                      <button>VIEW TOUR</button>
-                    </Link>
-                  </div>
-                </div>
-                <div className="tours-card-img">
-                  <img src={chillout} alt="tourImg" />
-                </div>
-              </div>
-            </div>
+            <AllTours />
           </div>
         </div>
       </div>

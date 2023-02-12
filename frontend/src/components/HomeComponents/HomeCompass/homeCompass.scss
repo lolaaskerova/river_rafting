@@ -2,6 +2,7 @@
 @import "../../../vendors/mixins";
 
 .compass {
+  background-color: $main_blue !important ;
   h1 {
     @include allToursTitle($colorName: $main_color);
   }

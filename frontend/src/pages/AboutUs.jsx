@@ -6,6 +6,7 @@ import AboutUsHero from "../components/AboutUsComponents/AboutUsHero/AboutUsHero
 import AboutUsMission from "../components/AboutUsComponents/AboutUsMission/AboutUsMission";
 import AboutUsSlider from "../components/AboutUsComponents/AboutUsSlider/AboutUsSlider";
 import AboutUsStory from "../components/AboutUsComponents/AboutUsStory/AboutUsStory";
+import AboutUsGetInTouch from "../components/AboutUsComponents/AboutUsGetInTouch/AboutUsGetInTouch";
 const AboutUs = () => {
   return (
     <>
@@ -18,6 +19,7 @@ const AboutUs = () => {
       <AboutUsMission />
       <AboutUsAdventureTeam />
       <AboutUsCareer />
+      <AboutUsGetInTouch />
     </>
   );
 };
