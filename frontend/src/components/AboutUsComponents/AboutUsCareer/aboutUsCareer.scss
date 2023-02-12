@@ -2,6 +2,12 @@
 .about-us-career {
   padding: 100px 300px;
   background-color: $third_gray;
+  @media (max-width: 1115px) {
+    padding: 100px 100px;
+  }
+  @media (max-width: 767px) {
+    padding: 100px 20px;
+  }
   .titles {
     text-align: center;
     display: flex;
@@ -58,8 +64,10 @@
         color: $main_gray;
         font-family: $main_font;
         display: none;
-        transition: 0.4s ease-in-out;
       }
     }
   }
+}
+.active {
+  display: block !important;
 }
