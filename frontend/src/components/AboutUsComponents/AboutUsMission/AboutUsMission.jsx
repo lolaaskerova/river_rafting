@@ -1,11 +1,11 @@
 import React from "react";
 import "./aboutUsMission.scss";
-import parking from "../../../assets/images/parking.png";
+import mission from "../../../assets/images/mission.png";
 const AboutUsMission = () => {
   return (
     <div className="about-us-mission ">
       <div className="logo">
-        <img src={parking} alt="logo" />
+        <img src={mission} alt="logo" />
       </div>
       <div className="mission-title">
         <h1>OUR MISSION</h1>

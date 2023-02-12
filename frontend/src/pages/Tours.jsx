@@ -1,6 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import Location from "../components/ToursComponents/Location/Location";
+import Location from "../components/Location/Location";
 import ToursHeroSection from "../components/ToursComponents/ToursHeroSection/ToursHeroSection";
 import ToursIncluded from "../components/ToursComponents/ToursIncluded/ToursIncluded";
 import ToursReasons from "../components/ToursComponents/ToursReasons/ToursReasons";

@@ -7,6 +7,7 @@ import Chilko from "../components/HomeComponents/HomeChilko/Chilko";
 import HomeFeedBack from "../components/HomeComponents/HomeFeedBack/HomeFeedBack";
 import HomeLocation from "../components/HomeComponents/HomeLocation/HomeLocation";
 import HomePackages from "../components/HomeComponents/HomePackages/HomePackages";
+import HomeTourLink from "../components/HomeComponents/HomeTourLink/HomeTourLink";
 import HomeTour from "../components/HomeComponents/HomeTours/HomeTour";
 
 const Home = () => {
@@ -20,6 +21,7 @@ const Home = () => {
       <HomeAbout />
       <HomeAllTours />
       <HomeTour />
+      <HomeTourLink />
       <Chilko />
       <HomeFeedBack />
       <HomePackages />

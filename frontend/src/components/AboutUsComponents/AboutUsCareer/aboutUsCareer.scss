@@ -1,0 +1,65 @@
+@import "../../../vendors/variables";
+.about-us-career {
+  padding: 100px 300px;
+  background-color: $third_gray;
+  .titles {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    .camp {
+      width: 50px;
+      height: 50px;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    h1 {
+      font-family: $second_font;
+      color: $main_blue;
+      letter-spacing: 2px;
+    }
+    p {
+      color: $main_gray;
+      font-family: $main_font;
+      padding: 0px 100px;
+    }
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-bottom: 1px solid $second_gray;
+    .title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      svg {
+        color: $main_blue;
+      }
+      h6 {
+        color: $main_blue;
+        font-family: $main_font;
+        font-weight: 600;
+        padding-top: 6px;
+        font-size: 20px;
+        cursor: pointer;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    .text {
+      p {
+        color: $main_gray;
+        font-family: $main_font;
+        display: none;
+        transition: 0.4s ease-in-out;
+      }
+    }
+  }
+}
