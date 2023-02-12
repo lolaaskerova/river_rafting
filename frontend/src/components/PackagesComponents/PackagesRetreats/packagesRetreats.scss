@@ -1,0 +1,84 @@
+@import "../../../vendors/variables";
+
+.packages-retreats {
+  margin-top: 50px;
+  .retreats-titles {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .logo {
+      width: 50px;
+      height: 50px;
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+    .title {
+      text-align: center;
+      h1 {
+        color: $main_blue;
+        font-family: $second_font;
+        letter-spacing: 2px;
+      }
+      p {
+        font-family: $main_font;
+      }
+    }
+  }
+}
+
+.reverse-tours-field {
+  @media (max-width: 767px) {
+    flex-direction: column-reverse !important;
+  }
+}
+
+.all-tours-field {
+  display: flex;
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
+  .all-tours-img {
+    width: 50%;
+    height: 486px;
+    @media (max-width: 1024px) {
+    }
+    @media (max-width: 767px) {
+      width: 100%;
+      height: 300px !important;
+    }
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .all-tours-text-field {
+    background-color: $third_gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 50%;
+    height: 486px;
+    @media (max-width: 767px) {
+      width: 100%;
+      height: 346px !important;
+    }
+
+    .all-tours-text-part {
+      display: flex;
+      gap: 15px;
+
+      .all-tours-text {
+        display: flex;
+        flex-direction: column;
+        max-width: 325px;
+      }
+    }
+  }
+}
