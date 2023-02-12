@@ -1,0 +1,25 @@
+@import "../../../vendors/variables";
+.package-hero {
+  background-image: url(../../../assets/images/packageHero.jpg);
+  height: 90vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  .package-hero-content {
+    padding: 200px 0px;
+    .package-hero-title {
+      text-align: center;
+      margin-bottom: 30px;
+      h1 {
+        color: $main_color;
+        font-family: $second_font;
+        font-size: 72px;
+        letter-spacing: 2px;
+      }
+      p {
+        color: $main_color;
+        font-family: $main_font;
+        font-size: 18px;
+      }
+    }
+  }
+}
