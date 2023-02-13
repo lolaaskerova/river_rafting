@@ -1,0 +1,24 @@
+@import "../../../vendors/variables";
+.gallery-second-grid {
+  padding: 60px 0px;
+  .second-grid-title {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h3 {
+      color: $main_blue !important;
+      font-family: $main_font;
+      font-weight: 600;
+    }
+    p {
+      color: $main_gray;
+      font-family: $main_font;
+      max-width: 70%;
+    }
+  }
+  .second-grid-content {
+    margin-top: 30px;
+  }
+}
