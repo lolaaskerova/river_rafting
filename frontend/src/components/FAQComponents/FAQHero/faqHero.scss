@@ -1,0 +1,17 @@
+@import "../../../vendors/variables";
+.faq-hero {
+  background-image: url(../../../assets/images/faq.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 80vh;
+  .faq-hero-title {
+    text-align: center;
+    padding: 165px;
+    h1 {
+      color: $main_color;
+      font-family: $second_font;
+      font-size: 74px;
+      letter-spacing: 2px;
+    }
+  }
+}
