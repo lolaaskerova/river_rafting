@@ -1,0 +1,11 @@
+.faq-info {
+  padding: 100px 50px;
+  .faq-info-field {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    @media (max-width: 767px) {
+      flex-direction: column;
+    }
+  }
+}
