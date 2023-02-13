@@ -36,39 +36,4 @@
       padding: 0px 100px;
     }
   }
-  .content {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    border-bottom: 1px solid $second_gray;
-    .title {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      svg {
-        color: $main_blue;
-      }
-      h6 {
-        color: $main_blue;
-        font-family: $main_font;
-        font-weight: 600;
-        padding-top: 6px;
-        font-size: 20px;
-        cursor: pointer;
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-    }
-    .text {
-      p {
-        color: $main_gray;
-        font-family: $main_font;
-        display: none;
-      }
-    }
-  }
-}
-.active {
-  display: block !important;
 }
