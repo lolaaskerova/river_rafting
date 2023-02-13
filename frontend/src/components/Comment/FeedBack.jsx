@@ -1,9 +1,9 @@
 import React from "react";
-
+import "./feedBack.scss";
 const FeedBack = (props) => {
   const { comment, userImg, userName, userProfession, fontSize } = props;
   return (
-    <div className="first-comment">
+    <div className="comment-field">
       <div className="comment">
         <p style={{ fontSize: { fontSize } }}>{comment}</p>
       </div>
