@@ -1,0 +1,20 @@
+@import "../../../vendors/variables";
+.gallery-hero {
+  background-image: url(../../../assets/images/galleryHero.jpg);
+  height: 55vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  .gallery-hero-title {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 150px 0px;
+    h1 {
+      color: $main_color;
+      font-family: $second_font;
+      font-size: 72px;
+      letter-spacing: 2px;
+    }
+  }
+}
