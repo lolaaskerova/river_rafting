@@ -1,0 +1,32 @@
+@import "../../../vendors/variables";
+.get-here-link {
+  background-color: $main_blue;
+  padding: 80px 0px;
+  display: flex;
+  gap: 20px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: 1054px) {
+    flex-direction: column;
+  }
+  h4 {
+    color: $main_color;
+    font-family: $main_font;
+  }
+  button {
+    padding: 12px 45px;
+    background-color: transparent;
+    color: $main_color;
+    font-family: $main_font;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border: 2px solid $main_color;
+    border-radius: 4px;
+    transition: 0.5s all;
+    &:hover {
+      color: $main_blue;
+      background-color: $main_color;
+    }
+  }
+}
