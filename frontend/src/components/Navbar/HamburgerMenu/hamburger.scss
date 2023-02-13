@@ -3,13 +3,12 @@
 
 .hamburger-menu {
   border-top: 1px solid gray;
-  //   padding-top: 10px;
-  //   padding-left: 15px;
   padding: 10px 30px 0;
   background-color: $main_gray;
   display: none;
   position: sticky;
   top: 62px;
+  z-index: 999;
 
   .hamburger-content {
     display: flex;

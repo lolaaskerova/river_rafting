@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./hamburger.scss";
-const HamburgerMenu = ({ toggle }) => {
+const HamburgerMenu = ({ setToggle, toggle }) => {
   const [click, setClick] = useState(false);
   const [shopClick, setShopClick] = useState(false);
   let activeHamburger = {
@@ -29,49 +29,83 @@ const HamburgerMenu = ({ toggle }) => {
             style={click ? activeHamburger : undefined}
           >
             <li>
-              <Link className="dropdown_content" to="/about">
+              <Link
+                className="dropdown_content"
+                to="/about"
+                onClick={() => setToggle(!toggle)}
+              >
                 About Us
               </Link>
             </li>
             <li>
-              <Link className="dropdown_content" to="/package">
+              <Link
+                className="dropdown_content"
+                to="/package"
+                onClick={() => setToggle(!toggle)}
+              >
                 Packages & Specials
               </Link>
             </li>
             <li>
-              <Link className="dropdown_content" to="/gallery">
+              <Link
+                className="dropdown_content"
+                to="/gallery"
+                onClick={() => setToggle(!toggle)}
+              >
                 Gallery
               </Link>
             </li>
             <li>
-              <Link className="dropdown_content" to="/faq">
+              <Link
+                className="dropdown_content"
+                to="/faq"
+                onClick={() => setToggle(!toggle)}
+              >
                 FAQ
               </Link>
             </li>
             <li>
-              <Link className="dropdown_content" to="/gethere">
+              <Link
+                className="dropdown_content"
+                to="/gethere"
+                onClick={() => setToggle(!toggle)}
+              >
                 Getting Here
               </Link>
             </li>
             <li>
-              <Link className="dropdown_content" to="/careers">
+              <Link
+                className="dropdown_content"
+                to="/careers"
+                onClick={() => setToggle(!toggle)}
+              >
                 Careers
               </Link>
             </li>
             <li>
-              <Link className="dropdown_content" to="/contact">
+              <Link
+                className="dropdown_content"
+                to="/contact"
+                onClick={() => setToggle(!toggle)}
+              >
                 Contact
               </Link>
             </li>
           </ul>
         </a>
-        <Link className="hamburger_link" to="/features">
+        <Link
+          className="hamburger_link"
+          to="/features"
+          onClick={() => setToggle(!toggle)}
+        >
           Features
         </Link>
         <Link
           className="hamburger_link shop"
           to="/shop"
-          onClick={() => setShopClick(!shopClick)}
+          onClick={() => {
+            setShopClick(!shopClick);
+          }}
         >
           Shop ·
           <ul
@@ -84,7 +118,11 @@ const HamburgerMenu = ({ toggle }) => {
           </ul>
         </Link>
 
-        <Link className="hamburger_link" to="/blog">
+        <Link
+          className="hamburger_link"
+          to="/blog"
+          onClick={() => setToggle(!toggle)}
+        >
           Blog
         </Link>
         <a

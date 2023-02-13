@@ -108,7 +108,7 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-      <HamburgerMenu toggle={toggle} />
+      <HamburgerMenu setToggle={setToggle} toggle={toggle} />
     </>
   );
 };
