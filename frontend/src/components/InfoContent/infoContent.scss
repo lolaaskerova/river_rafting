@@ -1,0 +1,29 @@
+@import "../../vendors/variables";
+
+.info-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  .icon {
+    width: 54px;
+    height: 54px;
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .info-content-titles {
+    h4 {
+      color: $main_blue;
+      font-family: $main_font;
+      font-weight: 600;
+    }
+    p {
+      color: $main_gray;
+      font-family: $main_font;
+    }
+  }
+}
