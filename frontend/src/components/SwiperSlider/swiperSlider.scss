@@ -1,0 +1,22 @@
+.swiper-slider-field {
+  width: 100%;
+
+  .swiper-img-part {
+    max-height: 487px;
+    max-width: 100%;
+
+    @media (max-width: 767px) {
+      max-height: 749px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: white !important;
+}
