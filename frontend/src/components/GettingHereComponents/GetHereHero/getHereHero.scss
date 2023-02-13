@@ -1,0 +1,17 @@
+@import "../../../vendors/variables";
+.get-here-hero {
+  background-image: url(../../../assets/images/gethereHero.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 50vh;
+  .get-here-hero-title {
+    text-align: center;
+    padding: 100px;
+    h1 {
+      color: $black;
+      font-family: $second_font;
+      font-size: 74px;
+      letter-spacing: 2px;
+    }
+  }
+}
