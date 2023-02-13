@@ -1,54 +1,40 @@
 @import "../../../vendors/variables";
 
 .hero {
-  background-image: url(../../../assets/images/header.jpg);
+  background-image: url(../../../assets/images/homeHero.jpg);
   height: 100vh;
-  background-attachment: fixed;
   background-size: cover;
-  padding: 40px 0px 40px;
-  @media (max-width: 767px) {
-    background-attachment: unset;
-    padding: 40px 0px 100px;
-  }
-  .hero-content {
+  .hero-title {
+    padding-top: 180px;
     display: flex;
     justify-content: center;
-    padding-top: 90px;
-    @media (max-width: 767px) {
-      flex-direction: column-reverse;
-      align-items: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    h1 {
+      color: $main_color;
+      font-family: $second-font;
+      font-size: 78px;
+      letter-spacing: 2px;
     }
-    .calendar {
-      width: 400px;
-      height: 400px;
-      margin-right: 50px;
-      #calendar {
-        width: 100%;
-        height: 100%;
-      }
+    p {
+      color: $main_color;
+      font-family: $main_font;
+      font-size: 18px;
     }
-    .hero-title {
-      text-align: start;
-      width: 50%;
-      padding: 10px;
-      @media (max-width: 767px) {
-        text-align: center;
-        width: 100%;
+    button {
+      padding: 12px 38px;
+      border: none;
+      background-color: $main_color;
+      font-family: $main_font;
+      font-weight: 600;
+      border-radius: 4px;
+      a {
+        text-decoration: none;
+        color: $black;
       }
-      h1 {
-        letter-spacing: 3px;
-        font-size: 76px;
-        font-family: $second_font;
-        color: $main_color;
-        font-weight: 100;
-        margin: 0;
-        padding: 0;
-        @media (max-width: 991px) {
-          font-size: 64px;
-        }
-        @media (max-width: 767px) {
-          font-size: 58px;
-        }
+      &:hover {
+        background-color: $third_gray;
       }
     }
   }

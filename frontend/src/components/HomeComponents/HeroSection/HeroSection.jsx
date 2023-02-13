@@ -1,22 +1,15 @@
-import React, { useState } from "react";
-// import Calendar from "react-calendar";
+import React from "react";
+import { Link } from "react-router-dom";
 import "./hero.scss";
 const HeroSection = () => {
   return (
     <section className="hero">
-      <div className="container">
-        <div className="hero-content">
-          <div className="calendar">
-            <img
-              id="calendar"
-              src="https://freepngimg.com/thumb/calendar/2-2-calendar-png-image.png"
-              alt="calendar"
-            />
-          </div>
-          <div className="hero-title">
-            <h1>BOOK YOUR TICKETS TODAY!</h1>
-          </div>
-        </div>
+      <div className="hero-title">
+        <h1>WHITEWATER RAFTING</h1>
+        <p>Come and join the excitement with our adventure rafting team!</p>
+        <button>
+          <Link to="/tours">View All Tours</Link>
+        </button>
       </div>
     </section>
   );
