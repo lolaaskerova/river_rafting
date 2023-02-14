@@ -12,6 +12,7 @@ import MainRoot from "../pages/MainRoot";
 import PackagesAndSpecials from "../pages/PackagesAndSpecials";
 import Tours from "../pages/Tours";
 import NotFound from "../pages/NotFound";
+import CheckOut from "../pages/CheckOut";
 
 export const ROUTES = [
   {
@@ -65,6 +66,10 @@ export const ROUTES = [
       {
         path: "/basket",
         element: <Basket />,
+      },
+      {
+        path: "/check",
+        element: <CheckOut />,
       },
       {
         path: "*",
