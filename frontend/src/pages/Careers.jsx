@@ -6,6 +6,7 @@ import CareersPerks from "../components/CareersComponents/CareersPerks/CareersPe
 import CareersFeedBack from "../components/CareersComponents/CareersFeedBack/CareersFeedBack";
 import CareersWithUs from "../components/CareersComponents/CareersWithUs/CareersWithUs";
 import CareersLocation from "../components/CareersComponents/CareersLocation/CareersLocation";
+import CareersLinkField from "../components/CareersComponents/CareersLinkField/CareersLinkField";
 
 const Careers = () => {
   return (
@@ -19,6 +20,7 @@ const Careers = () => {
       <CareersFeedBack />
       <CareersWithUs />
       <CareersLocation />
+      <CareersLinkField />
     </>
   );
 };
