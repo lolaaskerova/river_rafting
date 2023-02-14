@@ -1,12 +1,14 @@
 @import "../../../vendors/variables";
+@import "../../../vendors/mixins";
 .get-here-hero {
   background-image: url(../../../assets/images/gethereHero.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  height: 50vh;
+  height: 328px;
+  @include flexCenter;
   .get-here-hero-title {
     text-align: center;
-    padding: 100px;
+    @include flexCenter;
     h1 {
       color: $main_blue;
       font-family: $second_font;

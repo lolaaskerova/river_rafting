@@ -1,11 +1,14 @@
 @import "../../../vendors/variables";
+@import "../../../vendors/mixins";
 .package-hero {
   background-image: url(../../../assets/images/packageHero.jpg);
-  height: 90vh;
+  height: 640px;
   background-size: cover;
   background-repeat: no-repeat;
+  @include flexCenter;
   .package-hero-content {
-    padding: 200px 0px;
+    @include flexCenter;
+    flex-direction: column;
     .package-hero-title {
       text-align: center;
       margin-bottom: 30px;

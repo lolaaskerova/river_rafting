@@ -15,7 +15,6 @@ const Home = () => {
       <Helmet>
         <title>Home - River Rafting</title>
       </Helmet>
-
       <HeroSection />
       <HomeAbout />
       <HomeAllTours />

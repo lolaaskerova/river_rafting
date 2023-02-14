@@ -1,12 +1,14 @@
 @import "../../../vendors/variables";
+@import "../../../vendors/mixins";
 .about-us-hero {
   background-image: url(../../../assets/images/aboutUsHero.jpg);
-  background-size: cover;
+  background-position: center center;
   background-repeat: no-repeat;
-  height: 70vh;
+  height: 340px;
+  @include flexCenter;
   .about-us-hero-title {
     text-align: center;
-    padding: 150px;
+    @include flexCenter;
     h1 {
       color: $main_color;
       font-family: $second_font;

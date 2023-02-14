@@ -1,13 +1,21 @@
 @import "../../../vendors/variables";
+@import "../../../vendors/mixins";
 
 .tours-hero {
   background-image: url(../../../assets/images/toursHero.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  height: 70vh;
+  height: 520px;
+  @media (max-width: 1024px) {
+    height: 400px;
+  }
+  @media (max-width: 767px) {
+    height: 350px;
+  }
+  @include flexCenter;
   .tours-hero-title {
     text-align: center;
-    padding: 200px;
+    @include flexCenter;
     h1 {
       color: $main_color;
       font-family: $second_font;

@@ -1,12 +1,16 @@
 @import "../../../vendors/variables";
+@import "../../../vendors/mixins";
+
 .faq-hero {
   background-image: url(../../../assets/images/faq.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  height: 80vh;
+  background-position: center center;
+  height: 500px;
+  @include flexCenter;
   .faq-hero-title {
     text-align: center;
-    padding: 165px;
+    @include flexCenter;
     h1 {
       color: $main_color;
       font-family: $second_font;

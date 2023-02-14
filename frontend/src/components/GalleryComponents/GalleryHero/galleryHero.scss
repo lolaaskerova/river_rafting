@@ -1,15 +1,14 @@
 @import "../../../vendors/variables";
+@import "../../../vendors/mixins";
 .gallery-hero {
   background-image: url(../../../assets/images/galleryHero.jpg);
-  height: 55vh;
+  height: 328px;
   background-size: cover;
   background-repeat: no-repeat;
+  @include flexCenter;
   .gallery-hero-title {
     text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 150px 0px;
+    @include flexCenter;
     h1 {
       color: $main_color;
       font-family: $second_font;

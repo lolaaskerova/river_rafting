@@ -1,14 +1,21 @@
 @import "../../../vendors/variables";
+@import "../../../vendors/mixins";
 
 .hero {
   background-image: url(../../../assets/images/homeHero.jpg);
-  height: 100vh;
+  height: 700px;
   background-size: cover;
+  @include flexCenter;
+
+  @media (max-width: 1024px) {
+    height: 500px;
+  }
+
+  @media (max-width: 767px) {
+    height: 400px;
+  }
   .hero-title {
-    padding-top: 180px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexCenter;
     text-align: center;
     flex-direction: column;
     h1 {
