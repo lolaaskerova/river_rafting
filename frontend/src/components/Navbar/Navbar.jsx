@@ -35,12 +35,8 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="nav-right_side">
-            <Link className="nav_link" to="/">
-              Home
-            </Link>
-            <Link className="nav_link" to="/tours">
-              Tours
-            </Link>
+            <Link to="/">Home</Link>
+            <Link to="/tours">Tours</Link>
             <a id="pages" href="#">
               Pages
               <ul className="pages">
@@ -76,21 +72,25 @@ const Navbar = () => {
                 </li>
               </ul>
             </a>
-            <Link className="nav_link" to="/about">
+            <Link className="" to="/about">
               About Us
             </Link>
-            <Link className="nav_link shop" to="/shop">
+            <a className=" shop" href="#">
               Shop
               <ul className="shop-dropdown">
+                <Link className="dropdown-content" to="/shop">
+                  Shop
+                </Link>
                 <Link className="dropdown-content" to="/basket">
                   Basket
                 </Link>
+                <Link className="dropdown-content" to="/check">
+                  Check Out
+                </Link>
               </ul>
-            </Link>
+            </a>
 
-            <Link className="nav_link" to="/blog">
-              Blog
-            </Link>
+            <Link to="/blog">Blog</Link>
             <a
               href="https://themeforest.net/item/embark-wordpress-theme-for-tour-companies/20216095?irgwc=1&clickid=3BgW1d3sRxyNTbgQNSSAlymTUkA3sW0M1UE8yE0&iradid=275988&irpid=319047&iradtype=ONLINE_TRACKING_LINK&irmptype=mediapartner&mp_value1=&utm_campaign=af_impact_radius_319047&utm_medium=affiliate&utm_source=impact_radius"
               id="purchase"
@@ -99,7 +99,7 @@ const Navbar = () => {
             </a>
             <div className="header-basket">
               <Link to="/basket">
-                <BiShoppingBag id="basket" />
+                <BiShoppingBag id="basket" /> <sup>0</sup>
               </Link>
             </div>
           </div>

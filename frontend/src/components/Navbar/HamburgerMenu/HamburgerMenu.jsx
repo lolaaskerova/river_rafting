@@ -100,9 +100,9 @@ const HamburgerMenu = ({ setToggle, toggle }) => {
         >
           Features
         </Link>
-        <Link
+        <a
+          href="#"
           className="hamburger_link shop"
-          to="/shop"
           onClick={() => {
             setShopClick(!shopClick);
           }}
@@ -112,11 +112,23 @@ const HamburgerMenu = ({ setToggle, toggle }) => {
             className="hamburger_shop-dropdown"
             style={shopClick ? activeShop : undefined}
           >
-            <Link className="dropdown-content" to="/basket">
-              Basket
-            </Link>
+            <li>
+              <Link className="dropdown-content" to="/shop">
+                Shop
+              </Link>
+            </li>
+            <li>
+              <Link className="dropdown-content" to="/basket">
+                Basket
+              </Link>
+            </li>
+            <li>
+              <Link className="dropdown-content" to="/check">
+                Check Out
+              </Link>
+            </li>
           </ul>
-        </Link>
+        </a>
 
         <Link
           className="hamburger_link"

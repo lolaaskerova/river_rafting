@@ -58,7 +58,7 @@ nav {
         display: block;
       }
     }
-    .nav_link::after {
+    .shop::after {
       content: "";
       display: block;
       height: 2px;
@@ -66,7 +66,7 @@ nav {
       background: $main_color;
       transition: width 0.3s;
     }
-    .nav_link:hover::after {
+    .shop:hover::after {
       width: 100%;
     }
     #pages::after {
@@ -88,12 +88,16 @@ nav {
       padding: 10px;
       transition: 1s;
       background-color: #403f3f;
+      padding: 20px 30px 20px 20px;
       li {
         list-style: none;
         margin-top: 10px;
         margin-bottom: 10px;
         .dropdown_content {
           @include dropdown;
+          &:hover {
+            color: $main_color;
+          }
         }
       }
     }
@@ -111,14 +115,20 @@ nav {
       padding: 10px;
       transition: 1s;
       background-color: #403f3f;
-
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 20px 30px 20px 20px;
       .dropdown-content {
         color: $second_gray;
         opacity: 0.6;
         font-weight: 400;
         font-family: $main_font;
-        font-size: 14px;
+        font-size: 14px !important;
         margin-left: 0;
+        &:hover {
+          color: $main_color;
+        }
       }
     }
     .shop:hover .shop-dropdown {

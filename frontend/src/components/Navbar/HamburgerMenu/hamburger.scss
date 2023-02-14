@@ -59,9 +59,13 @@
       background-color: #1f2426;
       padding: 10px 30px;
       display: none;
-      a {
-        @include dropdown;
-        text-decoration: none;
+      li {
+        list-style: none;
+        margin-bottom: 10px;
+        a {
+          @include dropdown;
+          text-decoration: none;
+        }
       }
     }
     #purchase {
