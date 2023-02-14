@@ -1,0 +1,41 @@
+@import "../../../vendors/variables";
+@import "../../../vendors/mixins";
+
+.careers-perks-field {
+    background-color: #efefef;
+
+    .careers-perks-part {
+        padding: 10px;
+
+        .careers-perks-content {
+            @include flexCenter;
+            flex-direction: column;
+
+            .careers-perk-title {
+                height: 175px;
+                @include flexCenter;
+
+                h2 {
+                    line-height: 110%;
+                    text-transform: uppercase;
+                    letter-spacing: 0.05em;
+                    font-size: 42px;
+                    font-family: $second_font;
+                    color: $main_blue;
+                }
+            }
+
+            .careers-perk-rows {
+                padding-bottom: 50px;
+
+                .careers-perk-items {
+                    @include flexCenter;
+
+                    @media(max-width: 767px) {
+                        flex-direction: column;
+                    }
+                }
+            }
+        }
+    }
+}
