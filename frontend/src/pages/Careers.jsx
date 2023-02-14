@@ -5,6 +5,7 @@ import CareersWhy from "../components/CareersComponents/CareersWhy/CareersWhy";
 import CareersPerks from "../components/CareersComponents/CareersPerks/CareersPerks";
 import CareersFeedBack from "../components/CareersComponents/CareersFeedBack/CareersFeedBack";
 import CareersWithUs from "../components/CareersComponents/CareersWithUs/CareersWithUs";
+import CareersLocation from "../components/CareersComponents/CareersLocation/CareersLocation";
 
 const Careers = () => {
   return (
@@ -17,6 +18,7 @@ const Careers = () => {
       <CareersPerks />
       <CareersFeedBack />
       <CareersWithUs />
+      <CareersLocation />
     </>
   );
 };

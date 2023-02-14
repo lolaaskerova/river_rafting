@@ -18,7 +18,7 @@ const Tours = () => {
       <OurTours title="OUR TOURS" />
       <ToursIncluded />
       <ToursView />
-      <Location />
+      <Location height="500px" />
     </>
   );
 };
