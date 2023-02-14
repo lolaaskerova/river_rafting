@@ -1,6 +1,8 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import CareersHero from "../components/CareersComponents/CareersHero/CareersHero";
+import CareersWhy from "../components/CareersComponents/CareersWhy/CareersWhy";
+
 const Careers = () => {
   return (
     <>
@@ -8,6 +10,7 @@ const Careers = () => {
         <title>Careers - River Rafting</title>
       </Helmet>
       <CareersHero />
+      <CareersWhy />
     </>
   );
 };
