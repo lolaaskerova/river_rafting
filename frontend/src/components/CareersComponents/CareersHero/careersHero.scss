@@ -1,0 +1,58 @@
+@import "../../../vendors/variables";
+@import "../../../vendors/mixins";
+
+.careers-hero {
+    background-image: url(../../../assets/images/homeHero.jpg);
+    height: 700px;
+    background-size: cover;
+    @include flexCenter;
+
+    @media (max-width: 1024px) {
+        height: 500px;
+    }
+
+    @media (max-width: 767px) {
+        height: 400px;
+    }
+
+    .hero-title {
+        @include flexCenter;
+        text-align: center;
+        flex-direction: column;
+
+        h1 {
+            color: $main_color;
+            font-family: $second-font;
+            font-size: 78px;
+            letter-spacing: 2px;
+        }
+
+        p {
+            color: $main_color;
+            font-family: $main_font;
+            font-size: 18px;
+        }
+
+        button {
+            padding: 12px 38px;
+            border: 2px $main_color solid;
+            background-color: transparent;
+            font-family: $main_font;
+            font-weight: 600;
+            border-radius: 4px;
+
+            a {
+                text-decoration: none;
+                color: $main_color;
+            }
+
+            &:hover {
+                background-color: $main_color;
+
+                a {
+                    color: $main_blue;
+                }
+            }
+        }
+    }
+}
