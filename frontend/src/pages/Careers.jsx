@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet";
 import CareersHero from "../components/CareersComponents/CareersHero/CareersHero";
 import CareersWhy from "../components/CareersComponents/CareersWhy/CareersWhy";
 import CareersPerks from "../components/CareersComponents/CareersPerks/CareersPerks";
+import CareersFeedBack from "../components/CareersComponents/CareersFeedBack/CareersFeedBack";
 
 const Careers = () => {
   return (
@@ -13,6 +14,7 @@ const Careers = () => {
       <CareersHero />
       <CareersWhy />
       <CareersPerks />
+      <CareersFeedBack />
     </>
   );
 };

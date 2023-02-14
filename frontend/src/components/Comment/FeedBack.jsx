@@ -5,7 +5,7 @@ const FeedBack = (props) => {
   return (
     <div className="comment-field">
       <div className="comment">
-        <p style={{ fontSize: { fontSize } }}>{comment}</p>
+        <p style={{ fontSize: fontSize }}>{comment}</p>
       </div>
       <div className="user">
         <div className="user-profile">
