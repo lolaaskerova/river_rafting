@@ -1,6 +1,8 @@
 @import "../../vendors/variables";
 @import "../../vendors/mixins";
-
+#nav-color {
+  background-color: #23272a;
+}
 .scrolled-bg {
   background-color: #23272a;
   transition: 0.9s;
@@ -35,7 +37,8 @@ nav {
       display: flex;
       align-items: center;
       gap: 32px;
-      a {
+      a,
+      span {
         text-decoration: none;
         font-weight: 500;
         color: $main_color;
@@ -149,6 +152,14 @@ nav {
       border-left: 1px solid $second_gray;
       @media (max-width: 810px) {
         display: none;
+      }
+      a {
+        position: relative;
+      }
+      sup {
+        position: absolute;
+        top: 3px;
+        right: -3px;
       }
       #basket {
         margin-left: 20px;

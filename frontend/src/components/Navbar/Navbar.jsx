@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./navbar.scss";
 import { BiShoppingBag } from "react-icons/bi";
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -7,8 +7,23 @@ import logo from "../../assets/images/logo.png";
 import HamburgerMenu from "./HamburgerMenu/HamburgerMenu";
 
 const Navbar = () => {
+  const location = useLocation();
+  console.log(location);
+  //   const [navbar, setNavbar] = useState(false);
   const [scrollBg, setScrollBg] = useState(false);
 
+  //changable navbar color for page
+  //   useEffect(() => {
+  //     if (
+  //       location.pathname === "/gethere" ||
+  //       location.pathname === "/contact" ||
+  //       location.pathname === "*"
+  //     ) {
+  //       setNavbar(true);
+  //     }
+  //   }, [location]);
+
+  //set navbar color on scroll
   const listenScrollEvent = () => {
     window.scrollY > 20 ? setScrollBg(true) : setScrollBg(false);
   };
@@ -21,13 +36,18 @@ const Navbar = () => {
 
   //hamburger menu toggle
   const [toggle, setToggle] = useState(false);
-  const [notFound, setNotFound] = useState(false);
 
   console.log(toggle);
 
+  const bgCondition =
+    location.key === "default" || location.pathname === "/contact";
+
   return (
     <>
-      <nav className={scrollBg ? "scrolled-bg" : ""}>
+      <nav
+        className={scrollBg ? "scrolled-bg" : ""}
+        id={bgCondition ? "nav-color" : ""}
+      >
         <div className="navbar container">
           <div className="nav-left_side">
             <Link to="/">
@@ -37,7 +57,7 @@ const Navbar = () => {
           <div className="nav-right_side">
             <Link to="/">Home</Link>
             <Link to="/tours">Tours</Link>
-            <a id="pages" href="#">
+            <span id="pages">
               Pages
               <ul className="pages">
                 <li>
@@ -71,11 +91,11 @@ const Navbar = () => {
                   </Link>
                 </li>
               </ul>
-            </a>
+            </span>
             <Link className="" to="/about">
               About Us
             </Link>
-            <a className=" shop" href="#">
+            <span className="shop">
               Shop
               <ul className="shop-dropdown">
                 <Link className="dropdown-content" to="/shop">
@@ -88,7 +108,7 @@ const Navbar = () => {
                   Check Out
                 </Link>
               </ul>
-            </a>
+            </span>
 
             <Link to="/blog">Blog</Link>
             <a
