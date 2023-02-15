@@ -1,0 +1,55 @@
+@import "../../vendors/variables";
+@import "../../vendors/mixins";
+.contact-us {
+  padding: 50px 0px;
+  .contact-us-title {
+    @include flexCenter;
+    flex-direction: column;
+    text-align: center;
+    h1 {
+      font-size: 74px;
+      color: $main_blue;
+      font-family: $second_font;
+      letter-spacing: 2px;
+    }
+    p {
+      color: $main_gray;
+      font-family: $main_font;
+      font-size: 18px;
+    }
+  }
+  .contact-us-about {
+    margin-top: 40px;
+    @media (max-width: 992px) {
+      gap: 60px;
+    }
+    .contact-us-icons {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      .contact {
+        display: flex;
+        gap: 15px;
+        .logo {
+          width: 36px;
+          height: 36px;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .contact-us-content {
+          h4 {
+            color: $main_blue;
+            font-family: $main_font;
+            font-weight: 600;
+          }
+          p {
+            color: $main_gray;
+            font-family: $main_font;
+          }
+        }
+      }
+    }
+  }
+}

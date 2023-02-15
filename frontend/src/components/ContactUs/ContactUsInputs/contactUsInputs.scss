@@ -1,0 +1,52 @@
+@import "../../../vendors/variables";
+.input {
+  div {
+    color: $error_color;
+    background-color: $error_bg;
+    border: 1px solid $error_border;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-family: $main_font;
+    font-size: 14px;
+    display: none;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 15px;
+    textarea,
+    input {
+      padding: 10px 15px;
+      border-radius: 4px;
+      border: 1px solid $third_gray;
+      outline: none;
+      font-family: $main_font;
+      font-size: 13px;
+    }
+    span {
+      font-family: $main_font;
+      font-size: 12px;
+      color: $error_color;
+      font-weight: 900;
+    }
+    button {
+      padding: 10px 30px;
+      font-size: 13px;
+      font-family: $main_font;
+      background-color: $main_blue;
+      color: $main_color;
+      font-weight: 600;
+      border: none;
+      border-radius: 5px;
+      width: 100px;
+    }
+  }
+}
+.error-message {
+  display: block !important;
+}
+.error-border {
+  border: 1px solid $error_color !important;
+}
