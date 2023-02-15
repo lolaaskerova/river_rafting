@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { FormScheme } from "../../scheme/FormScheme";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -12,9 +12,22 @@ const QuestionInputs = () => {
   const formSubmit = (data) => {
     console.log(data);
   };
+  //error message
+  const [value, setValue] = useState("");
+  const [blank, setBlank] = useState(false);
+
+  const errorMessage = (e) => {
+    if (e.target.value === "") {
+      setBlank(true);
+    }
+    setValue(e.target.value);
+  };
   return (
     <div className="container question-inputs-field">
       <form onSubmit={handleSubmit(formSubmit)} action="">
+        <div id="error" className={blank ? "error-message " : ""}>
+          There was a problem with your submission. Errors are marked below.
+        </div>
         <div className="row question-inputs">
           <div className="question-col col-lg-3 col-md-4 col-sm-6">
             <input type="text" name="name" placeholder="Name" />
@@ -22,6 +35,8 @@ const QuestionInputs = () => {
           <div className="question-col col-lg-3 col-md-4  col-sm-6">
             {" "}
             <input
+              className={blank ? "error-border" : ""}
+              value={value}
               {...register("email")}
               type="email"
               name="email"
@@ -29,7 +44,11 @@ const QuestionInputs = () => {
             />
             {errors.email ? (
               <span
-                style={{ color: "red", fontFamily: "Work Sans sans-serif" }}
+                style={{
+                  color: "#b94a48",
+                  fontSize: "13px",
+                  fontFamily: "Work Sans, sans-serif",
+                }}
               >
                 {errors.email.message}
               </span>
@@ -40,6 +59,8 @@ const QuestionInputs = () => {
           <div className="question-col col-lg-3 col-md-4  col-sm-6">
             {" "}
             <input
+              className={blank ? "error-border" : ""}
+              value={value}
               {...register("comment")}
               type="text"
               name="comment"
@@ -47,7 +68,11 @@ const QuestionInputs = () => {
             />
             {errors.comment ? (
               <span
-                style={{ color: "red", fontFamily: "Work Sans sans-serif" }}
+                style={{
+                  color: "#b94a48",
+                  fontSize: "13px",
+                  fontFamily: "Work Sans, sans-serif",
+                }}
               >
                 {errors.comment.message}
               </span>
@@ -56,7 +81,11 @@ const QuestionInputs = () => {
             )}
           </div>
           <div className="question-col col-lg-3 col-md-6  col-sm-6">
-            <button type="submit" className="question-button">
+            <button
+              onClick={(e) => errorMessage(e)}
+              type="submit"
+              className="question-button"
+            >
               SEND
             </button>
           </div>

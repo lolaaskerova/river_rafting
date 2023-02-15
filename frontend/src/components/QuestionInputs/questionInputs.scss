@@ -15,7 +15,17 @@
     @media (max-width: 992px) {
       max-width: 720px;
     }
-
+    #error {
+      color: $error_color;
+      background-color: $error_bg;
+      border: 1px solid $error_border;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      font-family: $main_font;
+      font-size: 14px;
+      display: none;
+    }
     .question-inputs {
       justify-content: center;
       text-align: center;
@@ -46,6 +56,13 @@
         outline: 0;
       }
 
+      span {
+        font-family: $main_font;
+        font-size: 12px;
+        color: $error_color;
+        font-weight: 900;
+      }
+
       .question-button {
         border: 0;
         background-color: $main_blue;
@@ -57,4 +74,11 @@
       }
     }
   }
+}
+
+.error-message {
+  display: block !important;
+}
+.error-border {
+  border: 1px solid $error_color !important;
 }
