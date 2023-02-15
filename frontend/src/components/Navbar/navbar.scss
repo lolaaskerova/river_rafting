@@ -42,6 +42,7 @@ nav {
         text-decoration: none;
         font-weight: 500;
         color: $main_color;
+        cursor: pointer;
       }
       @media (max-width: 767px) {
         display: none;
