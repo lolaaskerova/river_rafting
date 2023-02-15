@@ -11,8 +11,8 @@ const Location = (props) => {
         <p>Saturday: 11am - 4pm</p>
         <p>Sunday: Closed</p>
         <div className="contact-link">
-          <a href="">CALL US</a>
-          <a href="">EMAIL US</a>
+          <a href="tel:555-666-7777">CALL US</a>
+          <a href="mailto:abc@example.com">EMAIL US</a>
         </div>
       </div>
       <iframe
