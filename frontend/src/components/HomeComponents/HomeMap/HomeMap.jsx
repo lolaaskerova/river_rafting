@@ -2,6 +2,7 @@ import React from "react";
 import "./homeMap.scss";
 import map from "../../../assets/images/map.png";
 import homeMap from "../../../assets/images/homeMap.jpg";
+import { Link } from "react-router-dom";
 const HomeMap = () => {
   return (
     <div className="reverse-tours-field all-tours-field">
@@ -20,7 +21,7 @@ const HomeMap = () => {
               Canadian wilderness Maecenas sed diam eget lorem risus varius
               blandit sit amet non magna dolor.
             </p>
-            <a href="">View All Tours</a>
+            <Link to="/tours">View All Tours</Link>
           </div>
         </div>
       </div>

@@ -28,9 +28,9 @@ const Footer = () => {
               <div className="footer-payment">
                 <h5>Payment Accepted</h5>
                 <div className="payment-methods">
-                  <a href="">Visa</a>
-                  <a href="">PayPal</a>
-                  <a href="">MasterCard</a>
+                  <a href="https://www.visa.com.az/">Visa</a>
+                  <a href="https://www.paypal.com/az/home">PayPal</a>
+                  <a href="https://www.mastercard.az/az-az.html">MasterCard</a>
                 </div>
               </div>
             </div>
@@ -40,11 +40,11 @@ const Footer = () => {
                 <div className="contact-links">
                   <div className="contact-link">
                     <HiOutlineMailOpen />
-                    <a href="">contact@embark.com</a>
+                    <a href="mailto:abc@example.com">contact@embark.com</a>
                   </div>
                   <div className="contact-link">
                     <BiMessageRounded />
-                    <a href="">1-800-222-4545</a>
+                    <a href="tel:1-800-222-4545">1-800-222-4545</a>
                   </div>
                   <div className="contact-link">
                     <HiOutlineMap />
@@ -73,19 +73,21 @@ const Footer = () => {
               <div className="footer-recent-post">
                 <h5>Recent Posts</h5>
                 <div className="footer-recent">
-                  <a href="">Our Essential Rafting Tips</a>
+                  <Link to="/tours">Our Essential Rafting Tips</Link>
                   <span>April 20, 2017</span>
                 </div>
                 <div className="footer-recent">
-                  <a href="">Top Camping Destinations Reviewed</a>
+                  <Link to="/gethere">Top Camping Destinations Reviewed</Link>
                   <span>April 15, 2017</span>
                 </div>
                 <div className="footer-recent">
-                  <a href="">Multi-Day vs Single-Day Rafting Trips</a>
+                  <Link to="/gallery">
+                    Multi-Day vs Single-Day Rafting Trips
+                  </Link>
                   <span>April 10, 2017</span>
                 </div>
                 <div className="footer-recent">
-                  <a href="">The Rafting Experience</a>
+                  <Link to="/about">The Rafting Experience</Link>
                   <span>April 5, 2017</span>
                 </div>
               </div>

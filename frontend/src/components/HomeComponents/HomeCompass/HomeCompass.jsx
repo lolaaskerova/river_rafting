@@ -2,6 +2,7 @@ import React from "react";
 import "./homeCompass.scss";
 import compass from "../../../assets/images/compass.png";
 import compassTour from "../../../assets/images/compassTour.jpg";
+import { Link } from "react-router-dom";
 const HomeCompass = () => {
   return (
     <div className="all-tours-field">
@@ -17,7 +18,7 @@ const HomeCompass = () => {
               Class IV whitewater in North America. Maecenas sed diam eget risus
               varius blandit sit amet non magna.
             </p>
-            <a href="">View All Tours</a>
+            <Link to="/tours">View All Tours</Link>
           </div>
         </div>
       </div>

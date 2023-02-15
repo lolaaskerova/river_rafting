@@ -1,6 +1,7 @@
 import React from "react";
 import "./chilko.scss";
 import { AiOutlineArrowRight } from "react-icons/ai";
+import { Link } from "react-router-dom";
 const Chilko = () => {
   return (
     <div className="chilko">
@@ -13,9 +14,9 @@ const Chilko = () => {
             porttitor, massa lacus consequat ante. Sed fringilla, lorem a
             tristique porttitor, massa lacus consequat ante.
           </p>
-          <a href="">
+          <Link to="/tours">
             VIEW ALL TOURS <AiOutlineArrowRight />{" "}
-          </a>
+          </Link>
         </div>
       </div>
     </div>

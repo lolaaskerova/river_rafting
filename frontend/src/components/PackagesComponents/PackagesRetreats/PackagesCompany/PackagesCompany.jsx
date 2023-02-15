@@ -1,6 +1,7 @@
 import React from "react";
 import "./packagesCompany.scss";
 import company from "../../../../assets/images/aboutswiper1.jpg";
+import { Link } from "react-router-dom";
 const PackagesCompany = () => {
   return (
     <div className="all-tours-field">
@@ -12,7 +13,7 @@ const PackagesCompany = () => {
               Come and join the thrill and excitement of white water rafting
               with the adventure rafting team!
             </p>
-            <a href="">View All Tours</a>
+            <Link to="/tours">View All Tours</Link>
           </div>
         </div>
       </div>

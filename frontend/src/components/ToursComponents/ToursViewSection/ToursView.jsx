@@ -1,6 +1,7 @@
 import React from "react";
 import "./toursView.scss";
 import { AiOutlineArrowRight } from "react-icons/ai";
+import { Link } from "react-router-dom";
 const ToursView = () => {
   return (
     <>
@@ -12,9 +13,9 @@ const ToursView = () => {
               Come and join the thrill and excitement of white water rafting
               with the adventure rafting team!
             </p>
-            <a href="">
+            <Link to="/tours">
               VIEW TOUR SPECIALS <AiOutlineArrowRight />{" "}
-            </a>
+            </Link>
           </div>
         </div>
       </div>

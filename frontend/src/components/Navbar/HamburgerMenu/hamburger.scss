@@ -15,6 +15,9 @@
     flex-direction: column;
     gap: 18px;
     animation: growDown 0.4s ease-in-out;
+    .shop {
+      cursor: pointer;
+    }
 
     @keyframes growDown {
       0% {
@@ -39,6 +42,7 @@
     }
     #pages {
       @include nav-link;
+      cursor: pointer;
       .hamburger-pages {
         background-color: #1f2426;
         display: flex;

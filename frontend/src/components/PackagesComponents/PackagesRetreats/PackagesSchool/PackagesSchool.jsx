@@ -1,6 +1,7 @@
 import React from "react";
 import "./packagesSchool.scss";
 import school from "../../../../assets/images/school.jpg";
+import { Link } from "react-router-dom";
 const PackagesSchool = () => {
   return (
     <div className="reverse-tours-field all-tours-field">
@@ -15,7 +16,7 @@ const PackagesSchool = () => {
               Come and join the thrill and excitement of white water rafting
               with the adventure rafting team!
             </p>
-            <a href="">View All Tours</a>
+            <Link to="/tours">View All Tours</Link>
           </div>
         </div>
       </div>

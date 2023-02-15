@@ -22,7 +22,7 @@ const HamburgerMenu = ({ setToggle, toggle }) => {
         <Link className="hamburger_link" to="/tours">
           Tours
         </Link>
-        <a id="pages" href="#" onClick={() => setClick(!click)}>
+        <span id="pages" onClick={() => setClick(!click)}>
           Pages ·
           <ul
             className="hamburger-pages"
@@ -92,7 +92,7 @@ const HamburgerMenu = ({ setToggle, toggle }) => {
               </Link>
             </li>
           </ul>
-        </a>
+        </span>
         <Link
           className="hamburger_link"
           to="/features"
@@ -100,8 +100,7 @@ const HamburgerMenu = ({ setToggle, toggle }) => {
         >
           Features
         </Link>
-        <a
-          href="#"
+        <span
           className="hamburger_link shop"
           onClick={() => {
             setShopClick(!shopClick);
@@ -128,7 +127,7 @@ const HamburgerMenu = ({ setToggle, toggle }) => {
               </Link>
             </li>
           </ul>
-        </a>
+        </span>
 
         <Link
           className="hamburger_link"

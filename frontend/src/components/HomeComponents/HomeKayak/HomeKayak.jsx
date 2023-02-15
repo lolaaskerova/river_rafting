@@ -2,6 +2,7 @@ import React from "react";
 import "./homeKayak.scss";
 import kayak from "../../../assets/images/kayak.png";
 import homeKayak from "../../../assets/images/homeKayak.jpg";
+import { Link } from "react-router-dom";
 
 const HomeKayak = () => {
   return (
@@ -18,7 +19,7 @@ const HomeKayak = () => {
               guide-prepared meals. Come and join the thrill and excitement of
               white water rafting with the adventure rafting team!
             </p>
-            <a href="">View All Tours</a>
+            <Link to="/tours">View All Tours</Link>
           </div>
         </div>
       </div>
