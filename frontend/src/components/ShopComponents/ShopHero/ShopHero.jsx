@@ -4,7 +4,7 @@ const ShopHero = () => {
   return (
     <section className="shop-hero">
       <div className="shop-hero-title">
-        <h1>Shop</h1>
+        <h1>SHOP</h1>
       </div>
     </section>
   );
