@@ -1,0 +1,22 @@
+@import "../../../vendors/variables";
+@import "../../../vendors/mixins";
+
+.basket-hero {
+  background-image: url(../../../assets/images/shopHero.jpg);
+  height: 350px;
+  background-size: cover;
+  @include flexCenter;
+
+  .basket-hero-title {
+    @include flexCenter;
+    text-align: center;
+    flex-direction: column;
+
+    h1 {
+      color: $main_color;
+      font-family: $second-font;
+      font-size: 78px;
+      letter-spacing: 2px;
+    }
+  }
+}
