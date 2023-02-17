@@ -36,7 +36,7 @@ const QuestionInputs = () => {
             {" "}
             <input
               className={blank ? "error-border" : ""}
-              value={value}
+              //   value={value}
               {...register("email")}
               type="email"
               name="email"
@@ -60,7 +60,7 @@ const QuestionInputs = () => {
             {" "}
             <input
               className={blank ? "error-border" : ""}
-              value={value}
+              //   value={value}
               {...register("comment")}
               type="text"
               name="comment"

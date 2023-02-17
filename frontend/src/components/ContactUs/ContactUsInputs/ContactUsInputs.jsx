@@ -33,7 +33,7 @@ const ContactUsInputs = () => {
       <form onSubmit={handleSubmit(formSubmit)} action="">
         <input
           className={blank ? "error-border" : ""}
-          value={value}
+          //   value={value}
           {...register("name")}
           type="text"
           name="name"
@@ -42,7 +42,7 @@ const ContactUsInputs = () => {
         {errors.name ? <span>{errors.name.message}</span> : <></>}
         <input
           className={blank ? "error-border" : ""}
-          value={value}
+          //   value={value}
           {...register("email")}
           type="email"
           name="email"
@@ -52,7 +52,7 @@ const ContactUsInputs = () => {
         <input type="number" name="phone" placeholder="Phone" />
         <input
           className={blank ? "error-border" : ""}
-          value={value}
+          //   value={value}
           {...register("subject")}
           type="text"
           name="subject"
@@ -61,7 +61,7 @@ const ContactUsInputs = () => {
         {errors.subject ? <span>{errors.subject.message}</span> : <></>}
         <textarea
           className={blank ? "error-border" : ""}
-          value={value}
+          //   value={value}
           {...register("message")}
           name="message"
           placeholder="Message"
