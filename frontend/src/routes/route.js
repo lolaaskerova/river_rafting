@@ -13,6 +13,8 @@ import PackagesAndSpecials from "../pages/PackagesAndSpecials";
 import Tours from "../pages/Tours";
 import NotFound from "../pages/NotFound";
 import CheckOut from "../pages/CheckOut";
+import AdminRoot from "../pages/AdminRoot";
+import Admin from "../pages/Admin";
 
 export const ROUTES = [
   {
@@ -74,6 +76,16 @@ export const ROUTES = [
       {
         path: "*",
         element: <NotFound />,
+      },
+    ],
+  },
+  {
+    path: "",
+    element: <AdminRoot />,
+    children: [
+      {
+        path: "/admin",
+        element: <Admin />,
       },
     ],
   },
