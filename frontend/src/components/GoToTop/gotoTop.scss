@@ -1,0 +1,21 @@
+.go-to-top {
+  width: 50px;
+  height: 50px;
+  bottom: 18px;
+  right: 18px;
+  position: fixed;
+  color: #fff;
+  font-size: 18px;
+  line-height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(000, 000, 000, 0.3);
+  opacity: 0.6;
+  border-radius: 5px;
+  border: none;
+  &:hover {
+    background-color: #515151;
+  }
+}
