@@ -1,0 +1,154 @@
+@import "../../../vendors/variables";
+@import "../../../vendors/mixins";
+.desc-review {
+  padding: 50px 0px;
+  border-bottom: 1px solid $second_gray;
+  .arrow {
+    @media (max-width: 767px) {
+      margin-bottom: 20px;
+    }
+    .description {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid $second_gray;
+      padding: 10px;
+      @media (max-width: 767px) {
+        @include flexCenter;
+        svg {
+          display: none;
+        }
+      }
+      h6 {
+        font-weight: 900;
+        font-family: $main_font;
+        cursor: pointer;
+      }
+    }
+    .review {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid $second_gray;
+      padding: 10px;
+      @media (max-width: 767px) {
+        @include flexCenter;
+        svg {
+          display: none;
+        }
+      }
+      h6 {
+        font-weight: 900;
+        font-family: $main_font;
+        cursor: pointer;
+      }
+    }
+  }
+  .description-text {
+    h4 {
+      font-family: $main_font;
+    }
+    p {
+      font-family: $main_font;
+    }
+  }
+  .review-content {
+    display: none;
+    h4 {
+      font-family: $main_font;
+    }
+    p {
+      font-family: $main_font;
+    }
+    .review-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      #tour-name {
+        font-size: 20px;
+      }
+      .ratings {
+        h6 {
+          font-family: $main_font;
+          color: $black;
+          font-weight: 900;
+        }
+        .stars svg {
+          font-size: 20px;
+          cursor: pointer;
+        }
+      }
+      .review-input {
+        h6 {
+          font-family: $main_font;
+          color: $black;
+          font-weight: 900;
+        }
+        textarea {
+          border: 1px solid $second_gray;
+          border-radius: 5px;
+          outline: none;
+          font-family: $main_font;
+          font-size: 14px;
+          padding: 10px;
+        }
+      }
+      .review-email {
+        display: flex;
+        gap: 20px;
+
+        h6 {
+          font-family: $main_font;
+          color: $black;
+          font-weight: 900;
+        }
+        input {
+          border: 1px solid $second_gray;
+          border-radius: 5px;
+          outline: none;
+          font-family: $main_font;
+          font-size: 14px;
+          padding: 10px 3px;
+        }
+      }
+      .form-check label {
+        font-family: $main_font;
+        color: $main_gray;
+        font-weight: 900;
+      }
+      button {
+        width: 100px;
+        padding: 6px;
+        color: $main_gray;
+        background-color: $third_gray;
+        border-radius: 5px;
+        border: none;
+        font-family: $main_font;
+        font-size: 14px;
+        &:hover {
+          background-color: $second_gray;
+        }
+      }
+    }
+  }
+}
+
+#active-content {
+  display: block;
+}
+
+#unactive-content {
+  display: none;
+}
+
+.svg-un {
+  display: none;
+}
+.svg {
+  display: block;
+}
+.unact-color {
+  color: $second_gray;
+}
+.act-color {
+  color: $black;
+}
