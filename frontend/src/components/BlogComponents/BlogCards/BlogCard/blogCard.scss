@@ -1,0 +1,35 @@
+@import "../../../../vendors/variables";
+.blog-card-item {
+  margin-bottom: 20px;
+  .card-body {
+    padding: 30px 20px;
+    .blog-title {
+      border-bottom: 1px solid $second_gray;
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+      h3 {
+        font-family: $main_font;
+        color: $main_blue;
+        font-weight: 700;
+        font-size: 20px;
+      }
+      .card-title {
+        color: #8b8b8b;
+        font-size: 14px;
+        font-family: $main_font;
+        a {
+          text-decoration: none;
+          color: $main_blue;
+        }
+      }
+      .card-text {
+        font-family: $main_font;
+      }
+    }
+    .time p {
+      color: #8b8b8b;
+      font-family: $main_font;
+      font-size: 14px;
+    }
+  }
+}
