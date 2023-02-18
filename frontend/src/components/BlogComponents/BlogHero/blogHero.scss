@@ -1,0 +1,21 @@
+@import "../../../vendors/variables";
+@import "../../../vendors/mixins";
+
+.blog-hero {
+  background-image: url(../../../assets/images/blogHero.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 500px;
+  @include flexCenter;
+  .blog-hero-title {
+    text-align: center;
+    @include flexCenter;
+    h1 {
+      color: $main_color;
+      font-family: $second_font;
+      font-size: 74px;
+      letter-spacing: 2px;
+    }
+  }
+}
