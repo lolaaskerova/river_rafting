@@ -2,4 +2,113 @@
 @import "../../vendors/mixins";
 .all-tours {
   padding: 30px;
+  .tour-card {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    margin-bottom: 20px;
+    transition: 0.9s;
+
+    &:hover .tour-card-content {
+      opacity: 1;
+      visibility: visible;
+      transition: 0.9s;
+    }
+
+    &:hover img {
+      transform: scale(1.1);
+      transition: 0.9s;
+    }
+
+    @media (max-width: 1024px) {
+      &:hover .tour-card-content > span {
+        display: block;
+      }
+    }
+
+    .tour-card-content {
+      width: calc(100% - 25px);
+      height: 100%;
+      transition: 0.9s;
+      background-color: rgba(50, 50, 93, 0.75);
+      position: absolute;
+      z-index: 2;
+      text-align: center;
+      padding: 20px 20px;
+      visibility: hidden;
+      opacity: 0;
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+
+      @media (max-width: 1024px) {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      span {
+        color: $main_color;
+        font-family: $main_font;
+        font-weight: 600;
+
+        @media (max-width: 1024px) {
+          display: none;
+        }
+      }
+
+      .tour-card-title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        gap: 2px;
+
+        h3 {
+          font-family: $main_font;
+          color: $main_color;
+          font-size: 28px;
+          font-weight: normal;
+          line-height: 120%;
+          text-transform: uppercase;
+        }
+
+        p {
+          font-family: $main_font;
+          color: $main_color;
+          font-size: 16px;
+          font-weight: 400;
+        }
+
+        button {
+          @include tourBtn;
+          background-color: transparent;
+          color: $main_color;
+          border: 2px solid $main_color;
+        }
+      }
+    }
+
+    .tours-card-img {
+      max-width: 423px;
+      max-height: 423px;
+      overflow: hidden;
+
+      @media (max-width: 992px) {
+        max-width: 444px;
+        max-height: 444px;
+      }
+
+      @media (max-width: 767px) {
+        max-width: 680px;
+        max-height: 680px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        transition: 0.9s;
+      }
+    }
+  }
 }
