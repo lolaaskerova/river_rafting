@@ -15,6 +15,7 @@ import NotFound from "../pages/NotFound";
 import CheckOut from "../pages/CheckOut";
 import AdminRoot from "../pages/AdminRoot";
 import Admin from "../pages/Admin";
+import Detail from "../pages/Detail";
 
 export const ROUTES = [
   {
@@ -72,6 +73,10 @@ export const ROUTES = [
       {
         path: "/check",
         element: <CheckOut />,
+      },
+      {
+        path: "/tour/:id",
+        element: <Detail />,
       },
       {
         path: "*",

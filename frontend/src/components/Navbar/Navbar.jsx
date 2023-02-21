@@ -5,23 +5,12 @@ import { BiShoppingBag } from "react-icons/bi";
 import { GiHamburgerMenu } from "react-icons/gi";
 import logo from "../../assets/images/logo.png";
 import HamburgerMenu from "./HamburgerMenu/HamburgerMenu";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
   const location = useLocation();
-  console.log(location);
-  //   const [navbar, setNavbar] = useState(false);
   const [scrollBg, setScrollBg] = useState(false);
-
-  //changable navbar color for page
-  //   useEffect(() => {
-  //     if (
-  //       location.pathname === "/gethere" ||
-  //       location.pathname === "/contact" ||
-  //       location.pathname === "*"
-  //     ) {
-  //       setNavbar(true);
-  //     }
-  //   }, [location]);
+  const quantity = useSelector((state) => state.cart);
 
   //set navbar color on scroll
   const listenScrollEvent = () => {
@@ -37,10 +26,10 @@ const Navbar = () => {
   //hamburger menu toggle
   const [toggle, setToggle] = useState(false);
 
-  console.log(toggle);
-
   const bgCondition =
-    location.key === "default" || location.pathname === "/contact";
+    location.key === "default" ||
+    location.pathname === "/contact" ||
+    location.pathname === "/tour/:id";
 
   return (
     <>
@@ -119,7 +108,8 @@ const Navbar = () => {
             </a>
             <div className="header-basket">
               <Link to="/basket">
-                <BiShoppingBag id="basket" /> <sup>0</sup>
+                <BiShoppingBag id="basket" />{" "}
+                <span>{quantity.cartTotalQuantity}</span>
               </Link>
             </div>
           </div>

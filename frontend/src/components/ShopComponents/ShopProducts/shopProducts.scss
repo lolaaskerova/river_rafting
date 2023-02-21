@@ -6,8 +6,7 @@
     margin-top: 95px;
     margin-bottom: 26px;
     padding: 10px;
-    display: flex;
-    flex-wrap: wrap;
+    @include flexCenter;
 
     .product-row {
       width: 100%;

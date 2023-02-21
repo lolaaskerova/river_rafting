@@ -1,140 +1,69 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import product1 from "../../../assets/images/waterfall.jpg";
+import axios from "axios";
 import "./shopProducts.scss";
+import addToCart from "../../../redux/features/CartSlice";
+import BASE_URL from "../../../API/tourUrl";
+
 const ShopProducts = () => {
-  const discount = true;
-  const sale = true;
-  const id = 2;
+  const [data, setData] = useState([]);
+  //get data
+  const getData = async () => {
+    const response = await axios.get(BASE_URL);
+    setData(response.data);
+  };
+  useEffect(() => {
+    getData();
+  }, []);
+  //add to cart
+  const dispatch = useDispatch();
+
+  const handleAddToCart = (product) => {
+    dispatch(addToCart(product));
+  };
+
   return (
     <div className="shop-products-field">
       <div className="container">
         <div className="shop-products">
           <div className="product-row row">
-            <div className="product-card col-12 col-sm-6 col-md-4">
-              <Link to={"/product/" + id}>
-                {" "}
-                {/* burdaki id yerinə product.id olacaq */}
-                <div className="product-image">
-                  {sale && <span className="sale">Sale!</span>}
-                  <img src={product1} alt="product" />
-                </div>
-                <h2>Gift Card</h2>
-                <div className="product-price-field">
-                  {discount ? (
-                    <div className="discount-prices">
-                      <del>$10.00</del>
-                      <div className="discount-new-price">$10.00</div>
-                    </div>
-                  ) : (
-                    <span>$10.00</span>
-                  )}
-                </div>
-              </Link>
-              <button>Add To Cart</button>
-            </div>
-            <div className="product-card col-12 col-sm-6 col-md-4">
-              <Link to={"/product/" + id}>
-                <div className="product-image">
-                  {sale && <span className="sale">Sale!</span>}
-                  <img src={product1} alt="product" />
-                </div>
-                <h2>Gift Card</h2>
-                <div className="product-price-field">
-                  {discount ? (
-                    <div className="discount-prices">
-                      <del>$10.00</del>
-                      <div className="discount-new-price">$10.00</div>
-                    </div>
-                  ) : (
-                    <span>$10.00</span>
-                  )}
-                </div>
-              </Link>
-              <button>Add To Cart</button>
-            </div>
-            <div className="product-card col-12 col-sm-6 col-md-4">
-              <Link to={"/product/" + id}>
-                <div className="product-image">
-                  {sale && <span className="sale">Sale!</span>}
-                  <img src={product1} alt="product" />
-                </div>
-                <h2>Gift Card</h2>
-                <div className="product-price-field">
-                  {discount ? (
-                    <div className="discount-prices">
-                      <del>$10.00</del>
-                      <div className="discount-new-price">$10.00</div>
-                    </div>
-                  ) : (
-                    <span>$10.00</span>
-                  )}
-                </div>
-              </Link>
-              <button>Add To Cart</button>
-            </div>
-            <div className="product-card col-12 col-sm-6 col-md-4">
-              <Link to={"/product/" + id}>
-                <div className="product-image">
-                  {sale && <span className="sale">Sale!</span>}
-                  <img src={product1} alt="product" />
-                </div>
-                <h2>Gift Card</h2>
-                <div className="product-price-field">
-                  {discount ? (
-                    <div className="discount-prices">
-                      <del>$10.00</del>
-                      <div className="discount-new-price">$10.00</div>
-                    </div>
-                  ) : (
-                    <span>$10.00</span>
-                  )}
-                </div>
-              </Link>
-              <button>Add To Cart</button>
-            </div>
-            <div className="product-card col-12 col-sm-6 col-md-4">
-              <Link to={"/product/" + id}>
-                <div className="product-image">
-                  {sale && <span className="sale">Sale!</span>}
-                  <img src={product1} alt="product" />
-                </div>
-                <h2>Gift Card</h2>
-                <div className="product-price-field">
-                  {discount ? (
-                    <div className="discount-prices">
-                      <del>$10.00</del>
-                      <div className="discount-new-price">$10.00</div>
-                    </div>
-                  ) : (
-                    <span>$10.00</span>
-                  )}
-                </div>
-              </Link>
-              <button>Add To Cart</button>
-            </div>
-            <div className="product-card col-12 col-sm-6 col-md-4">
-              <Link to={"/product/" + id}>
-                {" "}
-                {/* burdaki id yerinə product.id olacaq */}
-                <div className="product-image">
-                  {sale && <span className="sale">Sale!</span>}
-                  <img src={product1} alt="product" />
-                </div>
-                <h2>Gift Card</h2>
-                <div className="product-price-field">
-                  {discount ? (
-                    <div className="discount-prices">
-                      <del>$10.00</del>
-                      <div className="discount-new-price">$10.00</div>
-                    </div>
-                  ) : (
-                    <span>$10.00</span>
-                  )}
-                </div>
-              </Link>
-              <button>Add To Cart</button>
-            </div>
+            {data &&
+              data.map((tour) => {
+                return (
+                  <div
+                    className="product-card col-12 col-sm-6 col-md-4"
+                    key={tour._id}
+                  >
+                    <Link to={`/tour/${tour._id}`}>
+                      <div className="product-image">
+                        {tour.percentage && <span className="sale">Sale!</span>}
+                        <img src={tour.image} alt="tour" />
+                      </div>
+                      <h2>{tour.name}</h2>
+                      <div className="product-price-field">
+                        {tour.percentage ? (
+                          <div className="discount-prices">
+                            <del>${tour.price}.00</del>
+                            <div className="discount-new-price">
+                              $
+                              {tour.price -
+                                (tour.price * tour.percentage) / 100}
+                              .00
+                            </div>
+                          </div>
+                        ) : (
+                          <span>${tour.price}.00</span>
+                        )}
+                      </div>
+                    </Link>
+                    <button onClick={() => handleAddToCart(tour)}>
+                      Add To Cart
+                    </button>
+                  </div>
+                );
+              })}
           </div>
         </div>
       </div>

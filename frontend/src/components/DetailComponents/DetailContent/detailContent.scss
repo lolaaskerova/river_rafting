@@ -103,18 +103,31 @@
     #text {
       font-family: $main_font;
     }
-    .input {
+    .quantity {
       margin-bottom: 20px;
-      input {
-        border: 1px solid $second_gray;
-        max-width: 70px;
-        outline: none;
-        border-radius: 5px;
-        padding: 10px;
-        margin-right: 10px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      .increase,
+      .decrease {
+        border: none;
+        background-color: $main_color;
+        font-size: 18px;
+        font-weight: 600;
         font-family: $main_font;
       }
-      button {
+      .count {
+        font-weight: 600;
+        border: 2px solid $main_blue;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: $main_font;
+      }
+      #add {
         color: $main_color;
         background-color: $main_blue;
         font-family: $main_font;

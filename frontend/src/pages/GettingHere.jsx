@@ -19,7 +19,7 @@ const GettingHere = () => {
       <GetHereDirections />
       <GetHereLink />
       <GetHereShuttle />
-      <Location />
+      <Location height={"500px"} />
     </>
   );
 };

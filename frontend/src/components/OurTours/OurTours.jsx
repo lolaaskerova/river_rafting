@@ -3,11 +3,10 @@ import "./ourTours.scss";
 import AllTours from "../AllTours/AllTours";
 import axios from "axios";
 import { useState } from "react";
+import BASE_URL from "../../API/tourUrl";
 const OurTours = (props) => {
   const { title } = props;
-  const [sorted, setSorted] = useState({ sorted: "time", reversed: false });
   const [tours, setTours] = useState([]);
-  const BASE_URL = "http://localhost:7777/tour";
 
   const allData = async () => {
     const res = await axios.get(BASE_URL);

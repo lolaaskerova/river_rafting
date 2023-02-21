@@ -9,9 +9,7 @@ const QuestionInputs = () => {
     handleSubmit,
     formState: { errors },
   } = useForm({ resolver: yupResolver(FormScheme) });
-  const formSubmit = (data) => {
-    console.log(data);
-  };
+  const formSubmit = (data) => {};
   //error message
   const [value, setValue] = useState("");
   const [blank, setBlank] = useState(false);

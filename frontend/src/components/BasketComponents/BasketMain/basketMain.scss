@@ -1,0 +1,155 @@
+@import "../../../vendors/variables";
+@import "../../../vendors/mixins";
+
+.basket-main {
+  padding: 50px 0px;
+  .cart-items {
+    @include flexCenter;
+    flex-direction: column;
+
+    table {
+      width: 100%;
+      th {
+        text-align: left;
+        font-family: $main_font;
+        font-size: 13px;
+        padding: 10px 0px 10px 40px;
+      }
+
+      td {
+        text-align: left;
+        padding: 30px 0px 30px 40px;
+        font-family: $main_font;
+        border-top: 1px solid $second_gray;
+        border-bottom: 1px solid $second_gray;
+      }
+      .product-name {
+        font-weight: 700;
+        color: $main_blue;
+        &:hover {
+          text-decoration: underline;
+          color: $main_gray;
+        }
+      }
+      .quantity {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        button {
+          border: none;
+          background-color: $main_color;
+          color: $main_blue;
+          font-size: $main_font;
+          font-size: 18px;
+          font-weight: 600;
+        }
+        .count {
+          font-family: $main_font;
+        }
+      }
+      .total {
+        font-weight: 700;
+      }
+      .table-content .fa-solid {
+        color: red;
+        font-size: 20px;
+        cursor: pointer;
+      }
+    }
+  }
+  .coupon-input {
+    margin-top: 20px;
+    input {
+      width: 160px;
+      padding: 6px;
+      border: 1px solid $second_gray;
+      outline: none;
+      font-family: $main_font;
+      font-size: 14px;
+      border-radius: 5px;
+      margin-right: 10px;
+    }
+    button {
+      border: none;
+      border-radius: 5px;
+      font-family: $main_font;
+      font-size: 14px;
+      padding: 6px 10px;
+    }
+  }
+  .check-out {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-content: flex-start;
+    .check-out-content {
+      h5 {
+        font-family: $main_font;
+        margin-bottom: 20px;
+        font-weight: 500;
+      }
+      .subtotal {
+        border-bottom: 1px solid $second_gray;
+        display: flex;
+        justify-content: space-between;
+        h6 {
+          font-family: $main_font;
+          font-weight: 900;
+        }
+        p {
+          font-family: $main_font;
+        }
+      }
+      .check-out-total {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        h6 {
+          font-family: $main_font;
+          font-weight: 900;
+        }
+        p {
+          font-family: $main_font;
+          font-weight: 900;
+        }
+      }
+
+      a {
+        padding: 15px 30px;
+        text-align: center;
+        color: $main_color;
+        text-decoration: none;
+        font-family: $main_font;
+        background-color: $main_blue;
+        margin-top: 30px;
+        border-radius: 5px;
+      }
+    }
+  }
+  .empty {
+    .empty-text {
+      background-color: $third_gray;
+      border-top: 3px solid $second_gray;
+      border-radius: 5px;
+      p {
+        padding: 15px;
+        font-family: $main_font;
+      }
+    }
+    a {
+      background-color: $main_blue;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 5px;
+      transition: 0.3s all;
+      text-decoration: none;
+      color: $main_color;
+      font-family: $main_font;
+      font-size: 15px;
+      &:hover {
+        background-color: $second_gray;
+        color: $main_gray;
+      }
+    }
+  }
+}

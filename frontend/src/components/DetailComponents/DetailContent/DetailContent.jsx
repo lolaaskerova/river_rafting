@@ -1,30 +1,42 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
-import ModalImage from "react-modal-image";
 import { Link, useParams } from "react-router-dom";
 import { MdDone } from "react-icons/md";
 import axios from "axios";
 import "./detailContent.scss";
 import { useDispatch } from "react-redux";
-import { addToCart } from "../../../redux/features/CartSlice";
+import {
+  addToCart,
+  decreaseCart,
+  increaseCart,
+} from "../../../redux/features/CartSlice";
 import DetailDesc from "../DetailDesc/DetailDesc";
+import BASE_URL from "../../../API/tourUrl";
+
 const DetailContent = () => {
   const dispatch = useDispatch();
   const [tour, setTour] = useState({});
   const [added, setAdded] = useState(false);
-  let URL = "http://localhost:7777/tour";
   const { id } = useParams();
   const getData = async () => {
-    const resp = await axios.get(`${URL}/${id}`);
+    const resp = await axios.get(`${BASE_URL}/${id}`);
     setTour(resp.data);
   };
   useEffect(() => {
     getData();
   }, []);
-
+  //add to basket
   const addToBasket = (data) => {
     dispatch(addToCart(data));
     setAdded(true);
+  };
+  //increase cart quanity
+  const handleIncrease = (product) => {
+    dispatch(increaseCart(product));
+  };
+  //decrease cart quantity
+  const handleDecrease = (product) => {
+    dispatch(decreaseCart(product));
   };
   return (
     <div className="container">
@@ -67,9 +79,23 @@ const DetailContent = () => {
                 Sed tempor lorem eget bibendum elementum. Sed ornare lectus
                 vitae nisl eleifend, quis pellentesque odio aliquam.
               </p>
-              <div className="input">
-                <input type="number" defaultValue={1} />
-                <button onClick={() => addToBasket(tour)}>Add to cart</button>
+              <div className="quantity">
+                <button
+                  onClick={() => handleIncrease(tour)}
+                  className="decrease"
+                >
+                  -
+                </button>
+                <div className="count">{tour.cartQuantity}</div>
+                <button
+                  onClick={() => handleDecrease(tour)}
+                  className="increase"
+                >
+                  +
+                </button>
+                <button id="add" onClick={() => addToBasket(tour)}>
+                  Add to cart
+                </button>
               </div>
               <div className="category">
                 <p>

@@ -3,10 +3,33 @@ import { BsChevronRight } from "react-icons/bs";
 import { FaStar } from "react-icons/fa";
 import "./detailDesc.scss";
 import { useState } from "react";
+import axios from "axios";
+import COM_URL from "../../../API/commentUrl";
 const DetailDesc = ({ tour }) => {
   const [star, setStar] = useState(0);
   const [hover, setHover] = useState(undefined);
   const [desc, setDesc] = useState(true);
+  const [comment, setComment] = useState({
+    name: "",
+    email: "",
+    review: "",
+    rating: null,
+  });
+  //post comments
+  const handleChange = (e) => {
+    setComment({ ...comment, [e.target.name]: e.target.value });
+  };
+  const postComment = async () => {
+    await axios.post(COM_URL, comment);
+    setComment({
+      name: "",
+      email: "",
+      review: "",
+      rating: 0,
+    });
+  };
+
+  //
   // rating stars
   const stars = Array(5).fill(0);
   const colors = {
@@ -94,16 +117,22 @@ const DetailDesc = ({ tour }) => {
             </div>
             <div className="review-input">
               <h6>Your review *</h6>
-              <textarea name="" id="" cols="43" rows="8"></textarea>
+              <textarea
+                onChange={handleChange}
+                name="review"
+                id=""
+                cols="43"
+                rows="8"
+              ></textarea>
             </div>
             <div className="review-email">
               <div className="name">
                 <h6>Name *</h6>
-                <input type="text" />
+                <input type="text" onChange={handleChange} name="name" />
               </div>
               <div className="email">
                 <h6>Email *</h6>
-                <input type="email" />
+                <input type="email" onChange={handleChange} name="email" />
               </div>
             </div>
             <div class="form-check">
@@ -118,7 +147,7 @@ const DetailDesc = ({ tour }) => {
                 time I comment.
               </label>
             </div>
-            <button type="submit">Submit</button>
+            <button onClick={() => postComment()}>Submit</button>
           </div>
         </div>
       </div>

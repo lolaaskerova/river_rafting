@@ -1,10 +1,10 @@
 import React from "react";
 import Navbar from "../components/Navbar/Navbar";
-import { Outlet } from "react-router-dom";
 import Footer from "../components/Footer/Footer";
+import { Outlet } from "react-router-dom";
 import GoToTop from "../components/GoToTop/GoToTop";
 
-const MainRoot = () => {
+const AdminRoot = () => {
   return (
     <>
       <GoToTop />
@@ -15,4 +15,4 @@ const MainRoot = () => {
   );
 };
 
-export default MainRoot;
+export default AdminRoot;
