@@ -7,8 +7,8 @@ import "./detailContent.scss";
 import { useDispatch } from "react-redux";
 import {
   addToCart,
-  decreaseCart,
-  increaseCart,
+  decrementQuantity,
+  incrementQuantity,
 } from "../../../redux/features/CartSlice";
 import DetailDesc from "../DetailDesc/DetailDesc";
 import BASE_URL from "../../../API/tourUrl";
@@ -31,12 +31,12 @@ const DetailContent = () => {
     setAdded(true);
   };
   //increase cart quanity
-  const handleIncrease = (product) => {
-    dispatch(increaseCart(product));
+  const handleIncrease = (id) => {
+    dispatch(incrementQuantity(id));
   };
   //decrease cart quantity
-  const handleDecrease = (product) => {
-    dispatch(decreaseCart(product));
+  const handleDecrease = (id) => {
+    dispatch(decrementQuantity(id));
   };
   return (
     <div className="container">
@@ -86,14 +86,14 @@ const DetailContent = () => {
                 >
                   -
                 </button>
-                <div className="count">{tour.cartQuantity}</div>
+                <div className="count">{tour.quantity}</div>
                 <button
                   onClick={() => handleDecrease(tour)}
                   className="increase"
                 >
                   +
                 </button>
-                <button id="add" onClick={() => addToBasket(tour)}>
+                <button id="add" onClick={() => addToBasket(tour._id)}>
                   Add to cart
                 </button>
               </div>
