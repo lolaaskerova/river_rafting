@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import "./shopProducts.scss";
-import addToCart from "../../../redux/features/CartSlice";
+import { addToCart } from "../../../redux/features/CartSlice";
 import BASE_URL from "../../../API/tourUrl";
 
 const ShopProducts = () => {
@@ -20,8 +20,8 @@ const ShopProducts = () => {
   //add to cart
   const dispatch = useDispatch();
 
-  const handleAddToCart = (product) => {
-    dispatch(addToCart(product));
+  const handleAddToCart = (id) => {
+    dispatch(addToCart(id));
   };
 
   return (
