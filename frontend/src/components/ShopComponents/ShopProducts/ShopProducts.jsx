@@ -23,7 +23,6 @@ const ShopProducts = () => {
   const handleAddToCart = (id) => {
     dispatch(addToCart(id));
   };
-
   return (
     <div className="shop-products-field">
       <div className="container">

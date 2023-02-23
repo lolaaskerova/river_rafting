@@ -10,7 +10,7 @@ import { useSelector } from "react-redux";
 const Navbar = () => {
   const location = useLocation();
   const [scrollBg, setScrollBg] = useState(false);
-  const quantity = useSelector((state) => state.cart);
+  const cart = useSelector((state) => state.cart);
 
   //set navbar color on scroll
   const listenScrollEvent = () => {
@@ -29,8 +29,16 @@ const Navbar = () => {
   const bgCondition =
     location.key === "default" ||
     location.pathname === "/contact" ||
+    location.pathname === "/admin" ||
     location.pathname === "/tour/:id";
 
+  const getTotalQuantity = () => {
+    let total = 0;
+    cart.cart.forEach((item) => {
+      total += item.quantity;
+    });
+    return total;
+  };
   return (
     <>
       <nav
@@ -108,8 +116,7 @@ const Navbar = () => {
             </a>
             <div className="header-basket">
               <Link to="/basket">
-                <BiShoppingBag id="basket" />{" "}
-                <span>{quantity.cartTotalQuantity}</span>
+                <BiShoppingBag id="basket" /> <span>{getTotalQuantity()}</span>
               </Link>
             </div>
           </div>

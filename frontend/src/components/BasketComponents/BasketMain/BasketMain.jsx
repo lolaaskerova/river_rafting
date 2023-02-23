@@ -23,6 +23,14 @@ const BasketMain = () => {
   const handleDecrease = (id) => {
     dispatch(decrementQuantity(id));
   };
+
+  const getTotalPrice = () => {
+    let total = 0;
+    cart.cart.forEach((item) => {
+      total += item.price * item.quantity;
+    });
+    return total;
+  };
   return (
     <div className="container basket-main">
       {cart.cart.length === 0 ? (
@@ -99,11 +107,11 @@ const BasketMain = () => {
               <h5>Cart totals</h5>
               <div className="subtotal">
                 <h6>Subtotal</h6>
-                <p>${cart.cart.price * cart.cart.quantity}.00</p>
+                <p>${getTotalPrice()}.00</p>
               </div>
               <div className="check-out-total">
                 <h6>Total</h6>
-                <p>${cart.cart.price * cart.cart.quantity}.00</p>
+                <p>${getTotalPrice()}.00</p>
               </div>
               <Link to="/check">Proceed to checkout</Link>
             </div>
