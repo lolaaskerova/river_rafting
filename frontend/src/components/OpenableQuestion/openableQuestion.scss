@@ -5,6 +5,7 @@
   flex-direction: column;
   gap: 10px;
   border-bottom: 1px solid $second_gray;
+  overflow: hidden;
   .title {
     display: flex;
     align-items: center;
@@ -31,15 +32,17 @@
     }
   }
   .text {
+    height: 0px;
+    width: 100%;
+    transition: all 600ms ease 0s;
     p {
       color: $main_gray;
       font-family: $main_font;
-      display: none;
       margin-left: 25px;
     }
   }
 }
 
 .active {
-  display: block !important;
+  height: 88px !important;
 }

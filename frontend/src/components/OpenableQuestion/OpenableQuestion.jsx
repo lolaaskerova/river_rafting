@@ -29,8 +29,8 @@ const OpenableQuestion = (props) => {
           {title}
         </h6>
       </div>
-      <div className="text">
-        <p className={open ? "active" : ""}>{content}</p>
+      <div className={open ? "text active" : "text"}>
+        <p>{content}</p>
       </div>
     </div>
   );

@@ -10,6 +10,7 @@ import { FaFacebookF } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
+import AdventureTeamItem from "./AdventureTeamItem";
 const AboutUsAdventureTeam = () => {
   return (
     <div className=" container adventure-team">
@@ -25,104 +26,58 @@ const AboutUsAdventureTeam = () => {
             </p>
           </div>
         </div>
+        <AdventureTeamItem
+          img={rachel}
+          name={"Rachel Rafter"}
+          speciality={"Equipment"}
+          text={
+            "Nulla vitae elit libero, a pharetra augue. Sed posuereconsectetur est at lobortis."
+          }
+          icon1={<FaFacebookF />}
+          icon2={<FaTwitter />}
+        />
 
-        <div className="col-4 adventure">
-          <div class="card">
-            <img src={rachel} class="card-img-top" alt="rachel" />
-            <div class="card-body">
-              <div class="adventurer-info">
-                <h4>Rachel Rafter</h4>
-                <p class="card-title">Equipment</p>
-                <p class="card-text">
-                  Nulla vitae elit libero, a pharetra augue. Sed posuere
-                  consectetur est at lobortis.
-                </p>
-              </div>
-              <div className="adventurer-social-media">
-                <FaFacebookF />
-                <FaTwitter />
-              </div>
-            </div>
-          </div>
-        </div>
+        <AdventureTeamItem
+          img={rocky}
+          name={"Rocky River"}
+          speciality={"Equipment"}
+          text={
+            "Nulla vitae elit libero, a pharetra augue. Sed posuereconsectetur est at lobortis."
+          }
+          icon1={<FaInstagram />}
+          icon2={<FaFacebookF />}
+        />
 
-        <div className="col-4 adventure">
-          <div class="card">
-            <img src={rocky} class="card-img-top" alt="rocky" />
-            <div class="card-body">
-              <div class="adventurer-info">
-                <h4>Rocky River</h4>
-                <p class="card-title">Equipment</p>
-                <p class="card-text">
-                  Nulla vitae elit libero, a pharetra augue. Sed posuere
-                  consectetur est at lobortis.
-                </p>
-              </div>
-              <div className="adventurer-social-media">
-                <FaInstagram />
-                <FaFacebookF />
-              </div>
-            </div>
-          </div>
-        </div>
+        <AdventureTeamItem
+          img={rachel2}
+          name={"Rachel Rafter"}
+          speciality={"Equipment"}
+          text={
+            "Nulla vitae elit libero, a pharetra augue. Sed posuereconsectetur est at lobortis."
+          }
+          icon1={<FaTwitter />}
+        />
 
-        <div className="col-4 adventure bottom-row">
-          <div class="card">
-            <img src={rachel2} class="card-img-top" alt="rachel" />
-            <div class="card-body">
-              <div class="adventurer-info">
-                <h4>Rachel Rafter</h4>
-                <p class="card-title">Equipment</p>
-                <p class="card-text">
-                  Nulla vitae elit libero, a pharetra augue. Sed posuere
-                  consectetur est at lobortis.
-                </p>
-              </div>
-              <div className="adventurer-social-media">
-                <FaTwitter />
-              </div>
-            </div>
-          </div>
-        </div>
+        <AdventureTeamItem
+          img={rocky2}
+          name={"Rocky River"}
+          speciality={"Equipment"}
+          text={
+            "Nulla vitae elit libero, a pharetra augue. Sed posuereconsectetur est at lobortis."
+          }
+          icon1={<FaFacebookF />}
+        />
 
-        <div className="col-4 adventure bottom-row">
-          <div class="card">
-            <img src={rocky2} class="card-img-top" alt="rocky" />
-            <div class="card-body">
-              <div class="adventurer-info">
-                <h4>Rocky River</h4>
-                <p class="card-title">Equipment</p>
-                <p class="card-text">
-                  Nulla vitae elit libero, a pharetra augue. Sed posuere
-                  consectetur est at lobortis.
-                </p>
-              </div>
-              <div className="adventurer-social-media">
-                <FaFacebookF />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="col-4 adventure bottom-row">
-          <div class="card">
-            <img src={rocky3} class="card-img-top" alt="rocky" />
-            <div class="card-body">
-              <div class="adventurer-info">
-                <h4>Rocky River</h4>
-                <p class="card-title">Equipment</p>
-                <p class="card-text">
-                  Nulla vitae elit libero, a pharetra augue. Sed posuere
-                  consectetur est at lobortis.
-                </p>
-              </div>
-              <div className="adventurer-social-media">
-                <FaFacebookF />
-                <FaYoutube />
-              </div>
-            </div>
-          </div>
-        </div>
+        <AdventureTeamItem
+          img={rocky3}
+          name={"Rocky River"}
+          speciality={"Equipment"}
+          text={
+            "Nulla vitae elit libero, a pharetra augue. Sed posuereconsectetur est at lobortis."
+          }
+          icon1={<FaFacebookF />}
+          icon2={<FaYoutube />}
+        />
       </div>
     </div>
   );

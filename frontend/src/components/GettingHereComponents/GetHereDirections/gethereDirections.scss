@@ -2,6 +2,11 @@
 
 .get-here-directions {
   padding: 50px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 70px;
+  margin-top: 75px;
   .title {
     display: flex;
     flex-direction: column;
@@ -22,42 +27,9 @@
       letter-spacing: 2px;
     }
   }
-  .direction-content {
-    padding: 0px 300px;
-    margin-top: 30px;
-    @media (max-width: 1115px) {
-      padding: 0px 120px;
-    }
-    @media (max-width: 767px) {
-      padding: 0px 30px;
-    }
-    .heading {
-      display: flex;
-      gap: 15px;
-      align-items: center;
-      span {
-        color: $main_blue;
-        font-family: $main_font;
-        font-size: 18px;
-        cursor: pointer;
-      }
-      svg {
-        font-weight: 600;
-      }
-    }
-    .text {
-      border-left: 2px solid $second_gray;
-      margin-left: 8px;
-      margin-top: 10px;
-      p {
-        margin-left: 28px;
-        margin-top: 10px;
-        font-family: $main_font;
-      }
-    }
+  .getting-here-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
-}
-
-.text-view {
-  display: none;
 }
