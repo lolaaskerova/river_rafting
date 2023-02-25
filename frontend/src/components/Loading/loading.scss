@@ -1,0 +1,6 @@
+@import "../../vendors/mixins";
+
+.loading {
+  @include flexCenter;
+  margin-top: 20%;
+}
