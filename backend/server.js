@@ -41,6 +41,7 @@ mongoose.connect(URL, (err) => {
 app.use("/tour", tourRoute);
 //comment use
 app.use("/comment", commentRoute);
+//auth use
 app.use("/auth", authRoute);
 
 app.listen(PORT, () => {

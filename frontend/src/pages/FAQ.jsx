@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import FAQEquipment from "../components/FAQComponents/FAQEquipment/FAQEquipment";
 import FAQHero from "../components/FAQComponents/FAQHero/FAQHero";
@@ -9,6 +9,12 @@ import FAQSafety from "../components/FAQComponents/FAQSafety/FAQSafety";
 import FAQStory from "../components/FAQComponents/FAQStory/FAQStory";
 import FAQSwiper from "../components/FAQComponents/FAQSwiper/FAQSwiper";
 const FAQ = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "auto",
+    });
+  }, []);
   return (
     <>
       <Helmet>

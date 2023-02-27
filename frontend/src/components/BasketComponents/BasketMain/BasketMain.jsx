@@ -90,7 +90,7 @@ const BasketMain = () => {
                     <td>
                       <i
                         onClick={() => handleRemove(item._id)}
-                        class="fa-solid fa-xmark"
+                        className="fa-solid fa-xmark"
                         title="Remove this product"
                       ></i>
                     </td>

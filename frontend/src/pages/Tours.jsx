@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import Location from "../components/Location/Location";
 import OurTours from "../components/OurTours/OurTours";
@@ -8,6 +8,12 @@ import ToursReasons from "../components/ToursComponents/ToursReasons/ToursReason
 import ToursView from "../components/ToursComponents/ToursViewSection/ToursView";
 
 const Tours = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "auto",
+    });
+  }, []);
   return (
     <>
       <Helmet>

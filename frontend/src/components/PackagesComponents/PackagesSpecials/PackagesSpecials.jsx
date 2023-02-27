@@ -17,51 +17,51 @@ const PackagesSpecials = () => {
         </div>
         <div className="row special-tours">
           <div className="col-4">
-            <div class="card">
+            <div className="card">
               <div className="tour-price">
                 <h4>$399</h4>
                 <span>/person</span>
               </div>
-              <img class="card-img-top" src={chilkoTour} alt="tourImg" />
+              <img className="card-img-top" src={chilkoTour} alt="tourImg" />
 
-              <div class="tour-content">
+              <div className="tour-content">
                 <span>2 FOR 1</span>
-                <h5 class="card-title">Backountry Tour</h5>
-                <p class="card-text">
+                <h5 className="card-title">Backountry Tour</h5>
+                <p className="card-text">
                   Paddle the longest, continuous Class IV whitewater
                 </p>
               </div>
             </div>
           </div>
           <div className="col-4">
-            <div class="card">
+            <div className="card">
               <div className="tour-price">
                 <h4>$299</h4>
                 <span>/person</span>
               </div>
-              <img class="card-img-top" src={whiteWater} alt="tourImg" />
+              <img className="card-img-top" src={whiteWater} alt="tourImg" />
 
-              <div class="tour-content">
+              <div className="tour-content">
                 <span>25% OFF</span>
-                <h5 class="card-title">Corporate Retreats</h5>
-                <p class="card-text">
+                <h5 className="card-title">Corporate Retreats</h5>
+                <p className="card-text">
                   Paddle the longest, continuous Class IV whitewater
                 </p>
               </div>
             </div>
           </div>
           <div className="col-4 ">
-            <div class="card">
+            <div className="card">
               <div className="tour-price">
                 <h4>$349</h4>
                 <span>/person</span>
               </div>
-              <img class="card-img-top" src={rapidTour} alt="tourImg" />
+              <img className="card-img-top" src={rapidTour} alt="tourImg" />
 
-              <div class="tour-content">
+              <div className="tour-content">
                 <span>SAVE $50</span>
-                <h5 class="card-title">Chill Out Tour</h5>
-                <p class="card-text">
+                <h5 className="card-title">Chill Out Tour</h5>
+                <p className="card-text">
                   Paddle the longest, continuous Class IV whitewater
                 </p>
               </div>

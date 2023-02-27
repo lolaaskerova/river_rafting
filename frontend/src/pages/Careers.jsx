@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import CareersHero from "../components/CareersComponents/CareersHero/CareersHero";
 import CareersWhy from "../components/CareersComponents/CareersWhy/CareersWhy";
@@ -9,6 +9,12 @@ import CareersLocation from "../components/CareersComponents/CareersLocation/Car
 import CareersLinkField from "../components/CareersComponents/CareersLinkField/CareersLinkField";
 
 const Careers = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "auto",
+    });
+  }, []);
   return (
     <>
       <Helmet>

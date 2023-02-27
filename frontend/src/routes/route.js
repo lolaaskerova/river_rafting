@@ -16,6 +16,8 @@ import CheckOut from "../pages/CheckOut";
 import AdminRoot from "../pages/AdminRoot";
 import Admin from "../pages/Admin";
 import Detail from "../pages/Detail";
+import Login from "../pages/Login";
+import Register from "../pages/Register";
 
 export const ROUTES = [
   {
@@ -85,12 +87,20 @@ export const ROUTES = [
     ],
   },
   {
-    path: "",
+    path: "/",
     element: <AdminRoot />,
     children: [
       {
-        path: "/admin",
+        path: "admin",
         element: <Admin />,
+      },
+      {
+        path: "login",
+        element: <Login />,
+      },
+      {
+        path: "register",
+        element: <Register />,
       },
     ],
   },

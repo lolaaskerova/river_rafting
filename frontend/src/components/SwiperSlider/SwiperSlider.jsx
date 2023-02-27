@@ -63,7 +63,7 @@ const SwiperSlider = (props) => {
         </SwiperSlide>
         <div className="swiper-buttons">
           <TbChevronLeft className="swiper-button-prev" />
-          <TbChevronRight className="swiper-button-next" />
+          <TbChevronRight Name="swiper-button-next" />
         </div>
       </Swiper>
     </div>

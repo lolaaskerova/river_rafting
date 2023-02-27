@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import PackageHero from "../components/PackagesComponents/PackageHero/PackageHero";
 import PackageInfo from "../components/PackagesComponents/PackageInfo/PackageInfo";
@@ -8,6 +8,12 @@ import PackagesRetreats from "../components/PackagesComponents/PackagesRetreats/
 import PackagesSpecials from "../components/PackagesComponents/PackagesSpecials/PackagesSpecials";
 
 const PackagesAndSpecials = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "auto",
+    });
+  }, []);
   return (
     <>
       <Helmet>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import GetHereDirections from "../components/GettingHereComponents/GetHereDirections/GetHereDirections";
 import GetHerExperience from "../components/GettingHereComponents/GetHereExperience/GetHerExperience";
@@ -8,6 +8,12 @@ import GetHereShuttle from "../components/GettingHereComponents/GetHereShuttle/G
 import GetHereSwiper from "../components/GettingHereComponents/GetHereSwiper/GetHereSwiper";
 import Location from "../components/Location/Location";
 const GettingHere = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "auto",
+    });
+  }, []);
   return (
     <>
       <Helmet>

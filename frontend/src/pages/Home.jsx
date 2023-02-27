@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import HeroSection from "../components/HomeComponents/HeroSection/HeroSection";
 import HomeAbout from "../components/HomeComponents/HomeAbout/HomeAbout";
@@ -10,6 +11,12 @@ import HomePackages from "../components/HomeComponents/HomePackages/HomePackages
 import HomeTourLink from "../components/HomeComponents/HomeTourLink/HomeTourLink";
 import OurTours from "../components/OurTours/OurTours";
 const Home = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "auto",
+    });
+  }, []);
   return (
     <>
       <Helmet>

@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import GalleryFirstGrid from "../components/GalleryComponents/GalleryFirstGrid/GalleryFirstGrid";
 import GalleryHero from "../components/GalleryComponents/GalleryHero/GalleryHero";
 import GalleryLink from "../components/GalleryComponents/GalleryLink/GalleryLink";
 import GallerySecondGrid from "../components/GalleryComponents/GallerySecondGrid/GallerySecondGrid";
 const Gallery = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "auto",
+    });
+  }, []);
   return (
     <>
       <Helmet>

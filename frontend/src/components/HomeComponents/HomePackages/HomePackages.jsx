@@ -17,34 +17,34 @@ const HomePackages = () => {
       </div>
       <div className="row special-tours">
         <div className="col-4">
-          <div class="card">
+          <div className="card">
             <div className="tour-price">
               <h4>$399</h4>
               <span>/person</span>
             </div>
-            <img class="card-img-top" src={backcountryTour} alt="tourImg" />
+            <img className="card-img-top" src={backcountryTour} alt="tourImg" />
 
-            <div class="tour-content">
+            <div className="tour-content">
               <span>2 FOR 1</span>
-              <h5 class="card-title">Backountry Tour</h5>
-              <p class="card-text">
+              <h5 className="card-title">Backountry Tour</h5>
+              <p className="card-text">
                 Explore the backcountry with some fellow adrenaline seekers.
               </p>
             </div>
           </div>
         </div>
         <div className="col-4">
-          <div class="card">
+          <div className="card">
             <div className="tour-price">
               <h4>$299</h4>
               <span>/person</span>
             </div>
-            <img class="card-img-top" src={corporateTour} alt="tourImg" />
+            <img className="card-img-top" src={corporateTour} alt="tourImg" />
 
-            <div class="tour-content">
+            <div className="tour-content">
               <span>25% OFF</span>
-              <h5 class="card-title">Corporate Retreats</h5>
-              <p class="card-text">
+              <h5 className="card-title">Corporate Retreats</h5>
+              <p className="card-text">
                 Experience team building and fun explorations of the Chilko
                 River.
               </p>
@@ -52,17 +52,17 @@ const HomePackages = () => {
           </div>
         </div>
         <div className="col-4 ">
-          <div class="card">
+          <div className="card">
             <div className="tour-price">
               <h4>$349</h4>
               <span>/person</span>
             </div>
-            <img class="card-img-top" src={chilloutTour} alt="tourImg" />
+            <img className="card-img-top" src={chilloutTour} alt="tourImg" />
 
-            <div class="tour-content">
+            <div className="tour-content">
               <span>SAVE $50</span>
-              <h5 class="card-title">Chill Out Tour</h5>
-              <p class="card-text">
+              <h5 className="card-title">Chill Out Tour</h5>
+              <p className="card-text">
                 Open for paddler camping next weekend. Offseason rates apply.
               </p>
             </div>
