@@ -1,13 +1,16 @@
 import axios from "axios";
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Login = () => {
   const [user, setUser] = useState({
     email: "",
-    password: "",
+    secretKey: "",
   });
+  const [data, setData] = useState([]);
+  const [errorMessage, setErrorMessage] = useState("none");
+
   //input value
   const handleChange = (e) => {
     setUser({ ...user, [e.target.name]: e.target.value });
@@ -16,45 +19,52 @@ const Login = () => {
   //login function
   const handleLogin = async (e) => {
     e.preventDefault();
-    try {
-      await axios
-        .post("http://localhost:7777/auth/login", user)
-        .then((response) => {
-          document.cookie = `token=${response.data.token}; expires =${new Date(
-            Date.now() + 48000000
-          ).toUTCString()}; path=/`;
-          window.location.href = "/admin";
-          setUser({
-            email: "",
-            password: "",
-          });
-        });
-    } catch (err) {
-      console.log(err);
-    }
   };
+
+  const allData = async () => {
+    const res = await axios.get("https://jsonplaceholder.typicode.com/users");
+    setData(res.data);
+  };
+
+  const checkData = (e) => {
+    e.preventDefault();
+    for (let i = 0; i < 11; i++) {
+      if (data[i]?.email === user?.email && data[i]?.username === user?.secretKey) {
+        window.location.href = "/admin";
+      } else {
+        setErrorMessage("block")
+      }
+    }
+  }
+
+  useEffect(() => {
+    allData();
+  }, []);
 
   return (
     <>
-      <div className="login">
-        <form onSubmit={handleLogin} action="">
+      <div className="login d-flex align-items-center justify-content-center flex-column" style={{ paddingTop: " 120px" }}>
+        <form onSubmit={handleLogin} action="" style={{ maxWidth: "700px" }}>
           <label htmlFor="email">Email Address</label>
           <input
             type="email"
             onChange={handleChange}
             name="email"
             id="email"
+            className="form-control"
             value={user.email}
           />
-          <label htmlFor="pass">Password</label>
+          <label htmlFor="pass">Secret Key</label>
           <input
-            type="password"
+            type="text"
             onChange={handleChange}
-            name="password"
+            name="secretKey"
             id="pass"
-            value={user.password}
+            className="form-control"
+            value={user.secretKey}
           />
-          <button onClick={(e) => handleLogin(e)}>Log in</button>
+          <p style={{ display: errorMessage }}> Please check informations again</p>
+          <button onClick={(e) => checkData(e)} className="btn btn-primary mt-4">Log in</button>
         </form>
         <p>
           Don't have an account? <Link to="/register">Register</Link>
