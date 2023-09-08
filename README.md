@@ -1,3 +1,3 @@
-# river_rafting
+# River Rafting
 
-### Template Link : https://demo.themovation.com/embark/river-rafting/
+#### Template Link : https://demo.themovation.com/embark/river-rafting/
